@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 import json
 import random
+from typing import Set, Any, Dict, List
 
 
 load_dotenv()
@@ -10,7 +11,7 @@ api_key = os.getenv('API_KEY')
 client = OpenAI(api_key=api_key)
 
 
-def selection(file_path, num, rng):
+def selection(file_path, num):
     objects = []
     with open(file_path, 'r') as file:
         for line in file:
@@ -20,61 +21,14 @@ def selection(file_path, num, rng):
             except json.JSONDecodeError:
                 continue
     
-    if rng:
-        return random.sample(objects, min(num, len(objects)))
-    else:
-        return objects[:num]
+    return objects[:num]
 
 
 def comms(input, model="gpt-4o"):
-
-    schema = {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "properties": {
-            "Entities": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                "Entity": {
-                    "type": ["string", "number"]
-                },
-                "Class": {
-                    "type": "string",
-                    "enum": ["Title", "Ancestor", "Guidid", "Category", "Tool", "ToolUrl", "ToolThumbnail", "Url", "Step", "StepLine", "StepImage", "StepId", "Subject"]
-                }
-                },
-                "required": ["Entity", "Class"]
-            }
-            },
-            "Relations": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                "Source": {
-                    "type": ["string", "number"]
-                },
-                "Target": {
-                    "type": ["string", "number"]
-                },
-                "Relation": {
-                    "type": "string",
-                    "enum": ["hasAncestor", "hasGuidid", "hasCategory", "hasUrl", "hasThumbnail", "hasStepLine", "hasStepImage", "hasStepId", "hasSubject"]
-                }
-                },
-                "required": ["Source", "Target", "Relation"]
-            }
-            }
-        },
-        "required": ["Entities", "Relations"]
-    }
-
     messages=[
         {
             "role": "system",
-            "content": f"Extract the entities, entity classes and relations in this json object based on this schema: {schema}"
+            "content": "List the RDF entity classes and relations in this json object."
         },
         {
             "role": "user",
@@ -94,19 +48,51 @@ def comms(input, model="gpt-4o"):
         return ""
 
 
-def json_mode(raw):
-    pass
+def parse_json(json_obj: dict, string_list: List[str]) -> tuple[Dict[str, List[str]], Dict[str, List[str]]]:
+    top_level_keys = set()
+    nested_keys = set()
+
+    def process_nested(obj: Any, prefix: str = ""):
+        if isinstance(obj, dict):
+            for key, value in obj.items():
+                new_prefix = f"{prefix}-{key}" if prefix else key
+                nested_keys.add(new_prefix)
+                process_nested(value, new_prefix)
+        elif isinstance(obj, list):
+            for item in obj:
+                process_nested(item, prefix)
+
+    def extract_string(term):
+        prefix = "has"
+        if term.startswith(prefix):
+            return term[len(prefix):]
+        return term
+
+    for key, value in json_obj.items():
+        top_level_keys.add(key)
+        process_nested(value, key)
+
+    def match_substrings(key: str) -> List[str]:
+        return [s for s in string_list if any(part.lower() in extract_string(s).lower() or part.lower()[:-1] in extract_string(s).lower() for part in key.split('-'))]
+
+    top_level_dict = {key: match_substrings(key) for key in top_level_keys}
+    nested_dict = {key for key in nested_keys}
+
+    return top_level_dict, nested_dict
 
 
-def parse(file_path, test=True):
+def parse(file_path):
     objects = None
     opt = []
-    if test:
-        objects = selection(file_path, 1, False)
-    else:
-        objects = selection(file_path, 10, True)
-    for i, object in enumerate(objects):
-        opt.append(comms(object).replace('\n', ''))
+    string_list = ["hasAncestor", "hasGuidid", "hasCategory", "hasUrl", "hasThumbnail", "hasStepLine", "hasStepImage", "hasStepId", "hasTitle", "hasTool, hasSubject"]
+  
+    objects = selection(file_path, 1)
+ 
+    for object in objects:
+        top, nested = parse_json(object, string_list)
+        opt.append(top)
+        opt.append(nested)
+
     return opt
 
-print(parse("PC.json", test=True))
+print(parse("TEST.json"))
