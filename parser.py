@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 import json
 import random
+from collections import Counter
 from typing import Set, Any, Dict, List
 
 
@@ -61,21 +62,40 @@ def parse_json(json_obj: dict, string_list: List[str]) -> tuple[Dict[str, List[s
         elif isinstance(obj, list):
             for item in obj:
                 process_nested(item, prefix)
+        
+    def partition(s: str, n: int) -> List[str]:
+        s = s.lower()
+        return [s[i:i+n] for i in range(len(s) - n + 1)]
 
-    def extract_string(term):
-        prefix = "has"
-        if term.startswith(prefix):
-            return term[len(prefix):]
-        return term
+    def ngram_similarity(key: str, s: str, n: int) -> float:
+        key_ngrams = partition(key, n)
+        s_ngrams = partition(s, n)
+
+        key_counter = Counter(key_ngrams)
+        s_counter = Counter(s_ngrams)
+
+        common_ngrams = sum((key_counter & s_counter).values())
+        total_ngrams = sum(key_counter.values())
+
+        if total_ngrams == 0:
+            return 0.0
+
+        return common_ngrams / total_ngrams
+
+    def match_substrings(key: str, string_list: List[str], n: int = 3, threshold: float = 0.3) -> List[str]:
+        matched_strings = []
+        for s in string_list:
+            similarity = ngram_similarity(key, s, n)
+            if similarity >= threshold:
+                matched_strings.append(s)
+        
+        return matched_strings
 
     for key, value in json_obj.items():
         top_level_keys.add(key)
         process_nested(value, key)
 
-    def match_substrings(key: str) -> List[str]:
-        return [s for s in string_list if any(part.lower() in extract_string(s).lower() or part.lower()[:-1] in extract_string(s).lower() for part in key.split('-'))]
-
-    top_level_dict = {key: match_substrings(key) for key in top_level_keys}
+    top_level_dict = {key: match_substrings(key, string_list) for key in top_level_keys}
     nested_dict = {key for key in nested_keys}
 
     return top_level_dict, nested_dict
@@ -84,7 +104,7 @@ def parse_json(json_obj: dict, string_list: List[str]) -> tuple[Dict[str, List[s
 def parse(file_path):
     objects = None
     opt = []
-    string_list = ["hasAncestor", "hasGuidid", "hasCategory", "hasUrl", "hasThumbnail", "hasStepLine", "hasStepImage", "hasStepId", "hasTitle", "hasTool, hasSubject"]
+    string_list = ["hasAncestor", "hasGuidid", "hasCategory", "hasUrl", "hasThumbnail", "hasStepLine", "hasStepImage", "hasStepId", "hasTitle", "hasTool", "hasSubject"]
   
     objects = selection(file_path, 1)
  
