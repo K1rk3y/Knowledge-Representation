@@ -159,7 +159,7 @@ def parse(file_path):
     objects = None
     entity_relations = []
     values = []
-    string_list = ["hasAncestor", "hasGuidid", "hasCategory", "hasUrl", "hasThumbnail", "hasStepLine", "hasStepImage", "hasStepId", "hasTitle", "hasTool", "hasSubject"]
+    string_list = ["hasAncestor", "hasGuidid", "hasCategory", "hasUrl", "hasThumbnail", "hasStepLine", "hasStepImage", "hasStepId", "hasTitle", "hasTool", "hasSubject", "hasStepTextRaw", "hasStepOrder", "hasStepTool"]
   
     objects = selection(file_path, 1)
  
