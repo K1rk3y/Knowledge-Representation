@@ -174,4 +174,15 @@ def parse(file_path):
     return entity_relations, values
 
 
-print(parse("TEST.json"))
+def parse_subset(file_path):
+    json_objects = selection(file_path, 100)
+    result = set()
+    
+    for i, json_obj in enumerate(json_objects):
+       
+        result.add(json_obj['Category'])
+    
+    return result
+
+
+print(parse_subset("PC.json"))
