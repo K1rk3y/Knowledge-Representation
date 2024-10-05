@@ -1,8 +1,9 @@
 from owlready2 import *
 import json
 
+
 # Create a new ontology
-onto = get_ontology("http://example.org/ifix-it-ontology.owl")
+onto = get_ontology("http://cits3005.org/pc-ontology.owl")
 
 with onto:
     # Define classes
@@ -27,15 +28,22 @@ with onto:
     class Toolbox(Thing):
         pass
 
+    class Text(Thing):
+        pass
+
+    class Hazard(Thing):
+        pass
+
     # Define object properties
     class hasSubclass(Item >> Item):
         transitive = True
 
     class hasPart(Item >> Part):
-        pass
+        transitive = True
 
     class isPartOf(Part >> Item):
         inverse_property = hasPart
+        transitive = True
 
     class hasStep(Procedure >> Step):
         pass
@@ -48,6 +56,12 @@ with onto:
 
     class hasImage(Step >> Image):
         pass
+
+    class hasText(Step >> Text):
+        pass
+
+    class describes(Text >> Step):
+        inverse_property = hasText
 
     class isPartOfProcedure(Step >> Procedure):
         inverse_property = hasStep
@@ -73,11 +87,14 @@ with onto:
 
     # Define Sub_Procedure class with equivalence
     class Sub_Procedure(Procedure):
-        equivalent_to = [Procedure & hasStep.only(Step & isPartOfProcedure.some(Procedure))]
+        pass
 
     # Define hasSubProcedure property
     class hasSubProcedure(Procedure >> Procedure):
         pass
+
+    class hasHazard(Step >> Hazard):
+        transitive = True
 
 
 
@@ -228,6 +245,7 @@ def selection(file_path, num):
     
     return objects[:num]
 
+
 def extract_parts(text_raw, noun_list):
     # Convert the text to lowercase for case-insensitive matching
     text_lower = text_raw.lower()
@@ -243,6 +261,15 @@ def extract_parts(text_raw, noun_list):
     
     return found_parts
 
+
+def flag_hazards(text):
+    warning_words = ["dangerous", "danger", "hazardous", "careful", "carefully"]
+    
+    pattern = re.compile(r'\b(?:' + '|'.join(warning_words) + r')\b', re.IGNORECASE)
+
+    return bool(pattern.search(text))
+
+
 # Function to get or create an instance
 def get_or_create(cls, name):
     instance = cls(name)
@@ -250,9 +277,11 @@ def get_or_create(cls, name):
         return instance
     return cls(name)
 
+
 def clean_string(input_string):
     cleaned_string = input_string.replace(" ", "_").replace("-", "_")
     return cleaned_string
+
 
 def create_class(cls, category):
     cls = getattr(onto, clean_string(cls), None)
@@ -263,6 +292,7 @@ def create_class(cls, category):
         # Handle the case where the class does not exist
         print(f"Class {cls} does not exist.")
         return None
+
 
 search_list = ['battery', 'cover', 'screen']
 
@@ -292,11 +322,18 @@ for item in data:
     for step in item['Steps']:
         step_instance = get_or_create(Step, f"Step_{step['StepId']}")
         step_instance.isPartOfProcedure.append(procedure_instance)
-        # step_instance.hasOrder.append(step['Order'])
+        
+        text_instance = get_or_create(Text, f"Text_{step['StepId']}")
+        text_instance.label = step['Text_raw']
+        step_instance.hasText.append(text_instance)
 
         for part in extract_parts(step['Text_raw'], search_list):
             part_instance = get_or_create(Part, part)
             part_instance.isPartOf.append(item_instance)
+
+        if flag_hazards(step['Text_raw']):
+            hazard_instance = get_or_create(Hazard, f"Hazard_{step['StepId']}")
+            step_instance.hasHazard.append(hazard_instance)
         
         # Create Image instances
         for image_url in step['Images']:
@@ -312,7 +349,18 @@ for item in data:
     # Create Item hierarchy
     for ancestor in item['Ancestors']:
         ancestor_instance = get_or_create(Item, ancestor)
-        item_instance.hasSubclass.append(ancestor_instance)
+        item_instance.isPartOf.append(ancestor_instance)
+
+
+# Compute sub-procedure relations
+for p1 in onto.Procedure.instances():
+    for p2 in onto.Procedure.instances():
+        if p1 != p2:
+            steps_p1 = set(p1.hasStep)
+            steps_p2 = set(p2.hasStep)
+            if steps_p2 < steps_p1:
+                p2.is_a.append(onto.Sub_Procedure)
+
 
 # Add rules
 with onto:
@@ -333,6 +381,16 @@ with onto:
         DifferentFrom(?p1, ?p2)
         ->
         DifferentFrom(?p1, ?p2)
+    """)
+
+    # Sub-Procedure Consistency Rule (Part Item)
+    rule = Imp()
+    rule.set_as_rule("""
+        Sub_Procedure(?p2), Procedure(?p1), Item(?i1), Item(?i2),
+        hasSubProcedure(?p1, ?p2), isForItem(?p1, ?i1), isForItem(?p2, ?i2), 
+        DifferentFrom(?i1, ?i2)
+        ->
+        hasPart(?i1, ?i2)
     """)
 
 

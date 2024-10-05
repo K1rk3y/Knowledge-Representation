@@ -3,11 +3,11 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="http://example.org/ifix-it-ontology.owl"
-         xmlns="http://example.org/ifix-it-ontology.owl#"
+         xml:base="http://cits3005.org/pc-ontology.owl"
+         xmlns="http://cits3005.org/pc-ontology.owl#"
          xmlns:swrl="http://www.w3.org/2003/11/swrl#">
 
-<owl:Ontology rdf:about="http://example.org/ifix-it-ontology.owl"/>
+<owl:Ontology rdf:about="http://cits3005.org/pc-ontology.owl"/>
 
 <owl:ObjectProperty rdf:about="#hasSubclass">
   <rdfs:domain rdf:resource="#Item"/>
@@ -47,6 +47,18 @@
   <rdfs:domain rdf:resource="#Step"/>
   <rdfs:range rdf:resource="#Image"/>
   <owl:inverseOf rdf:resource="#illustratesStep"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasText">
+  <rdfs:domain rdf:resource="#Step"/>
+  <rdfs:range rdf:resource="#Text"/>
+  <owl:inverseOf rdf:resource="#describes"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#describes">
+  <rdfs:domain rdf:resource="#Text"/>
+  <rdfs:range rdf:resource="#Step"/>
+  <owl:inverseOf rdf:resource="#hasText"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#isPartOfProcedure">
@@ -89,6 +101,11 @@
   <rdfs:range rdf:resource="#Procedure"/>
 </owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#hasHazard">
+  <rdfs:domain rdf:resource="#Step"/>
+  <rdfs:range rdf:resource="#Hazard"/>
+</owl:ObjectProperty>
+
 <owl:DatatypeProperty rdf:about="#hasOrder">
   <rdfs:domain rdf:resource="#Step"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -122,29 +139,16 @@
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
 
+<owl:Class rdf:about="#Text">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Hazard">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
 <owl:Class rdf:about="#Sub_Procedure">
   <rdfs:subClassOf rdf:resource="#Procedure"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Procedure"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasStep"/>
-          <owl:allValuesFrom>
-            <owl:Class>
-              <owl:intersectionOf rdf:parseType="Collection">
-                <rdf:Description rdf:about="#Step"/>
-                <owl:Restriction>
-                  <owl:onProperty rdf:resource="#isPartOfProcedure"/>
-                  <owl:someValuesFrom rdf:resource="#Procedure"/>
-                </owl:Restriction>
-              </owl:intersectionOf>
-            </owl:Class>
-          </owl:allValuesFrom>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
 </owl:Class>
 
 <owl:Class rdf:about="#Toshiba_Satellite_1805_S177">
@@ -567,11 +571,11 @@
 
 <owl:NamedIndividual rdf:about="#Dell Latitude D620">
   <rdf:type rdf:resource="#Dell_Latitude_D620"/>
-  <hasSubclass rdf:resource="#Dell Latitude"/>
-  <hasSubclass rdf:resource="#Dell Laptop"/>
-  <hasSubclass rdf:resource="#PC Laptop"/>
-  <hasSubclass rdf:resource="#PC"/>
-  <hasSubclass rdf:resource="#Root"/>
+  <isPartOf rdf:resource="#Dell Latitude"/>
+  <isPartOf rdf:resource="#Dell Laptop"/>
+  <isPartOf rdf:resource="#PC Laptop"/>
+  <isPartOf rdf:resource="#PC"/>
+  <isPartOf rdf:resource="#Root"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Dell Latitude D620 CD Drive Replacement_Procedure">
@@ -602,7 +606,13 @@
 <owl:NamedIndividual rdf:about="#Step_11786">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11786"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/2ahoN1SZaDunCRlW.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11786">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power down the laptop and remove the battery. Open the laptop cover all of the way.</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#battery">
@@ -624,10 +634,21 @@
 <owl:NamedIndividual rdf:about="#Step_12017">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12017"/>
+  <hasHazard rdf:resource="#Hazard_12017"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/bDghaIwVmHtPtMZQ.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/C3GMiqK2KQ3YLX1n.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/aSPCQC6EeTlfKx5Z.standard"/>
   <usesTool rdf:resource="#spudger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12017">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the notch under the cover at the top of the keyboard Using the spudger as a lever, lift the plastic covering Carefully remove the rest of the covering from right to left</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hazard_12017">
+  <rdf:type rdf:resource="#Hazard"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/bDghaIwVmHtPtMZQ.standard">
@@ -645,8 +666,14 @@
 <owl:NamedIndividual rdf:about="#Step_12019">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12019"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/BwGFsYFJ1MNJADcV.standard"/>
   <usesTool rdf:resource="#ph00 phillips screwdriver"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12019">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unscrew the top portion of the keyboard using a #00 screwdriver</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/BwGFsYFJ1MNJADcV.standard">
@@ -656,7 +683,13 @@
 <owl:NamedIndividual rdf:about="#Step_12020">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12020"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/QA5Oqh3xJYJcYJAc.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12020">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hold keyboard from the top and gently pull towards the LCD screen to remove the keyboard from the case Don't pull on the keyboard too forcefully because it is attached to the motherboard with a short, thin ribbon cable</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#screen">
@@ -671,8 +704,14 @@
 <owl:NamedIndividual rdf:about="#Step_12021">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12021"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/GBUxtBDHiMMIo24Y.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/EsL12USdc1aGVj4E.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12021">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Once keyboard is out of the case, lay it face-down on the track pad</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/GBUxtBDHiMMIo24Y.standard">
@@ -686,9 +725,15 @@
 <owl:NamedIndividual rdf:about="#Step_12022">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12022"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/TAuWhDomSD6ICOYh.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/gUBVXCcjkITVFUG1.standard"/>
   <usesTool rdf:resource="#spudger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12022">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using a small spudger, pull back on the black bar to release the blue lever</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/TAuWhDomSD6ICOYh.standard">
@@ -702,7 +747,13 @@
 <owl:NamedIndividual rdf:about="#Step_12458">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12458"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/WxSRNoB5gxVV6DaX.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12458">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pull up on the metal bar connected to the socket to detach the ribbon cable</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/WxSRNoB5gxVV6DaX.standard">
@@ -712,8 +763,14 @@
 <owl:NamedIndividual rdf:about="#Step_13075">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_13075"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/eZTRTWQhAnwxWcjT.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/X1iGHHZrIUe6VE6Q.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_13075">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Press in the tab on the bottom right side of the CD drive The tab comes out on its own; there is no need to pull it out manually.</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/eZTRTWQhAnwxWcjT.standard">
@@ -727,7 +784,13 @@
 <owl:NamedIndividual rdf:about="#Step_13079">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_13079"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/TgPTif6VHSFgNIim.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_13079">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gently pull the tab to remove the disk tray.</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/TgPTif6VHSFgNIim.standard">
@@ -756,10 +819,10 @@
 
 <owl:NamedIndividual rdf:about="#Sony Vaio VGN-S260">
   <rdf:type rdf:resource="#Sony_Vaio_VGN_S260"/>
-  <hasSubclass rdf:resource="#Sony Laptop"/>
-  <hasSubclass rdf:resource="#PC Laptop"/>
-  <hasSubclass rdf:resource="#PC"/>
-  <hasSubclass rdf:resource="#Root"/>
+  <isPartOf rdf:resource="#Sony Laptop"/>
+  <isPartOf rdf:resource="#PC Laptop"/>
+  <isPartOf rdf:resource="#PC"/>
+  <isPartOf rdf:resource="#Root"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure">
@@ -782,10 +845,16 @@
 <owl:NamedIndividual rdf:about="#Step_11414">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11414"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/2qtXNUeZUOPTmEVr.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/lWfMZPnKXbSrDtBe.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/6RWAhEICt4o1GXOa.standard"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11414">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the laptop over so the Vaio logo is facing down Locate the battery at the top and Find the release and unlock slides on the battery Slide the unlock tab to the unlock position Slide the release tab in the direction of the arrow, i.e. towards the unlock tab</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/2qtXNUeZUOPTmEVr.standard">
@@ -803,9 +872,15 @@
 <owl:NamedIndividual rdf:about="#Step_11417">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11417"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/UxVpQcqCDhiwRdVS.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/EENvsrkNMbyhJjSt.standard"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11417">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With the tabs still in the unlock position, slide the battery away from the main case.</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/UxVpQcqCDhiwRdVS.standard">
@@ -819,9 +894,15 @@
 <owl:NamedIndividual rdf:about="#Step_11420">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11420"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/s4jLnNNhVflEGEsv.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/144Sm1RRKfHeAsAv.standard"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11420">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the computer over so the Vaio logo is facedown Unscrew the 2 screws next to the battery</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/s4jLnNNhVflEGEsv.standard">
@@ -835,8 +916,14 @@
 <owl:NamedIndividual rdf:about="#Step_11421">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11421"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/SIOmX15FSGhdHVFR.standard"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11421">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the computer over again so the Vaio logo is face up Open the lid</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/SIOmX15FSGhdHVFR.standard">
@@ -846,10 +933,16 @@
 <owl:NamedIndividual rdf:about="#Step_11422">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11422"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/dl5V2jQnZkf2cgwL.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/oiGLiGDohVPGdsKK.standard"/>
   <usesTool rdf:resource="#spudger"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11422">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Press down on the outer gray shell around the keyboard Use the spudger to gently lift keyboard Do not pull up the keyboard too far as it is attached to a ribbon underneath</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/dl5V2jQnZkf2cgwL.standard">
@@ -863,9 +956,15 @@
 <owl:NamedIndividual rdf:about="#Step_11423">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11423"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/aLkQAZWVgEuHJDwh.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/MKcusjrUmZUKIZVA.standard"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11423">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lift up lever underneath the ribbon to detach the keyboard.</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/aLkQAZWVgEuHJDwh.standard">
@@ -879,7 +978,13 @@
 <owl:NamedIndividual rdf:about="#Step_33175">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_33175"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/lv4W2iJlSs4JiNdy.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_33175">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove memory/wireless compartment cover</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/lv4W2iJlSs4JiNdy.standard">
@@ -889,9 +994,15 @@
 <owl:NamedIndividual rdf:about="#Step_11425">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11425"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/niOJPURiQoDNTGgF.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/DN6kNXK4hqFUMQAF.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/ZI565sLWlIDE6QEF.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11425">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip so the Vaio Logo is face down Locate and remove a total of 8 screws on the bottom.</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/niOJPURiQoDNTGgF.standard">
@@ -909,7 +1020,13 @@
 <owl:NamedIndividual rdf:about="#Step_33174">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_33174"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/RhVbwkfwcCDbmP6U.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_33174">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find and remove 5 screws (they all have arrows next to them) from cover</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/RhVbwkfwcCDbmP6U.standard">
@@ -919,10 +1036,16 @@
 <owl:NamedIndividual rdf:about="#Step_11427">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11427"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/QmWABaEnqqelMBNm.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/CBDikjHDsBaTfRVN.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/URHmM5Dsj46YtySt.standard"/>
   <usesTool rdf:resource="#spudger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11427">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the laptop over so the Vaio logo is face up Use the spudger to pop up the upper casing Do not lift too much as the Uppercasing is attached to wires underneath Remove the wires that are attaching the uppercasing to the motherboard</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/QmWABaEnqqelMBNm.standard">
@@ -940,7 +1063,13 @@
 <owl:NamedIndividual rdf:about="#Step_11670">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11670"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/PduMKUQ3XlFaOrw4.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11670">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the uppercasing</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/PduMKUQ3XlFaOrw4.standard">
@@ -954,6 +1083,7 @@
 <owl:NamedIndividual rdf:about="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
   <isForItem rdf:resource="#Sony Vaio VGN-S260"/>
+  <rdf:type rdf:resource="#Sub_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony Vaio VGN-S260 Keyboard Replacement_Toolbox">
@@ -981,6 +1111,109 @@
 <swrl:Variable rdf:about="urn:swrl#p1"/>
 
 <swrl:Variable rdf:about="urn:swrl#i"/>
+
+<swrl:Variable rdf:about="urn:swrl#i1"/>
+
+<swrl:Variable rdf:about="urn:swrl#i2"/>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Sub_Procedure"/>
+          <swrl:argument1 rdf:resource="urn:swrl#p2"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#Procedure"/>
+              <swrl:argument1 rdf:resource="urn:swrl#p1"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:ClassAtom>
+                  <swrl:classPredicate rdf:resource="#Item"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#i1"/>
+                </swrl:ClassAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#Item"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#i2"/>
+                    </swrl:ClassAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#hasSubProcedure"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#p1"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#p2"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                              <swrl:propertyPredicate rdf:resource="#isForItem"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#p1"/>
+                              <swrl:argument2 rdf:resource="urn:swrl#i1"/>
+                            </swrl:IndividualPropertyAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:IndividualPropertyAtom>
+                                  <swrl:propertyPredicate rdf:resource="#isForItem"/>
+                                  <swrl:argument1 rdf:resource="urn:swrl#p2"/>
+                                  <swrl:argument2 rdf:resource="urn:swrl#i2"/>
+                                </swrl:IndividualPropertyAtom>
+                              </rdf:first>
+                              <rdf:rest>
+                                <rdf:Description>
+                                  <rdf:first>
+                                    <swrl:DifferentIndividualsAtom>
+                                      <swrl:argument1 rdf:resource="urn:swrl#i1"/>
+                                      <swrl:argument2 rdf:resource="urn:swrl#i2"/>
+                                    </swrl:DifferentIndividualsAtom>
+                                  </rdf:first>
+                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                </rdf:Description>
+                              </rdf:rest>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#hasPart"/>
+          <swrl:argument1 rdf:resource="urn:swrl#i1"/>
+          <swrl:argument2 rdf:resource="urn:swrl#i2"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
 
 <swrl:Imp>
   <swrl:body>
