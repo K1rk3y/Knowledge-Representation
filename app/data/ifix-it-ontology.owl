@@ -572,7 +572,7 @@
   </owl:equivalentClass>
 </owl:Class>
 
-<owl:NamedIndividual rdf:about="#Dell Latitude D620">
+<owl:NamedIndividual rdf:about="#Dell_Latitude_D620_instance">
   <rdf:type rdf:resource="#Dell_Latitude_D620"/>
   <isPartOf rdf:resource="#Dell_Latitude"/>
   <isPartOf rdf:resource="#Dell_Laptop"/>
@@ -583,7 +583,7 @@
 
 <owl:NamedIndividual rdf:about="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
-  <isForItem rdf:resource="#Dell Latitude D620"/>
+  <isForItem rdf:resource="#Dell_Latitude_D620_instance"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Dell_Latitude_D620_CD_Drive_Replacement_Toolbox">
@@ -595,7 +595,7 @@
 
 <owl:NamedIndividual rdf:about="#CD_Drive">
   <rdf:type rdf:resource="#Part"/>
-  <isPartOf rdf:resource="#Dell Latitude D620"/>
+  <isPartOf rdf:resource="#Dell_Latitude_D620_instance"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#ph00_phillips_screwdriver">
@@ -610,7 +610,7 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11786"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/2ahoN1SZaDunCRlW.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/2ahoN1SZaDunCRlW.standard"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11786">
@@ -620,17 +620,19 @@
 
 <owl:NamedIndividual rdf:about="#battery">
   <rdf:type rdf:resource="#Part"/>
-  <isPartOf rdf:resource="#Dell Latitude D620"/>
-  <isPartOf rdf:resource="#Sony Vaio VGN-S260"/>
+  <isPartOf rdf:resource="#Dell_Latitude_D620_instance"/>
+  <isPartOf rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
+  <isPartOf rdf:resource="#Gateway_SA1_instance"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#cover">
   <rdf:type rdf:resource="#Part"/>
-  <isPartOf rdf:resource="#Dell Latitude D620"/>
-  <isPartOf rdf:resource="#Sony Vaio VGN-S260"/>
+  <isPartOf rdf:resource="#Dell_Latitude_D620_instance"/>
+  <isPartOf rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
+  <isPartOf rdf:resource="#Gateway_SA1_instance"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/2ahoN1SZaDunCRlW.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/2ahoN1SZaDunCRlW.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -639,9 +641,9 @@
   <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12017"/>
   <hasHazard rdf:resource="#Hazard_12017"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/bDghaIwVmHtPtMZQ.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/C3GMiqK2KQ3YLX1n.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/aSPCQC6EeTlfKx5Z.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/bDghaIwVmHtPtMZQ.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/C3GMiqK2KQ3YLX1n.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/aSPCQC6EeTlfKx5Z.standard"/>
   <usesTool rdf:resource="#spudger"/>
 </owl:NamedIndividual>
 
@@ -654,15 +656,15 @@
   <rdf:type rdf:resource="#Hazard"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/bDghaIwVmHtPtMZQ.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/bDghaIwVmHtPtMZQ.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/C3GMiqK2KQ3YLX1n.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/C3GMiqK2KQ3YLX1n.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/aSPCQC6EeTlfKx5Z.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/aSPCQC6EeTlfKx5Z.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -670,7 +672,7 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12019"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/BwGFsYFJ1MNJADcV.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BwGFsYFJ1MNJADcV.standard"/>
   <usesTool rdf:resource="#ph00_phillips_screwdriver"/>
 </owl:NamedIndividual>
 
@@ -679,7 +681,7 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unscrew the top portion of the keyboard using a #00 screwdriver</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/BwGFsYFJ1MNJADcV.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BwGFsYFJ1MNJADcV.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -687,7 +689,7 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12020"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/QA5Oqh3xJYJcYJAc.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QA5Oqh3xJYJcYJAc.standard"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_12020">
@@ -697,10 +699,11 @@
 
 <owl:NamedIndividual rdf:about="#screen">
   <rdf:type rdf:resource="#Part"/>
-  <isPartOf rdf:resource="#Dell Latitude D620"/>
+  <isPartOf rdf:resource="#Dell_Latitude_D620_instance"/>
+  <isPartOf rdf:resource="#Gateway_SA1_instance"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/QA5Oqh3xJYJcYJAc.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QA5Oqh3xJYJcYJAc.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -708,8 +711,8 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12021"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/GBUxtBDHiMMIo24Y.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/EsL12USdc1aGVj4E.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/GBUxtBDHiMMIo24Y.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EsL12USdc1aGVj4E.standard"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_12021">
@@ -717,11 +720,11 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Once keyboard is out of the case, lay it face-down on the track pad</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/GBUxtBDHiMMIo24Y.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/GBUxtBDHiMMIo24Y.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/EsL12USdc1aGVj4E.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EsL12USdc1aGVj4E.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -729,8 +732,8 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12022"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/TAuWhDomSD6ICOYh.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/gUBVXCcjkITVFUG1.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TAuWhDomSD6ICOYh.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gUBVXCcjkITVFUG1.standard"/>
   <usesTool rdf:resource="#spudger"/>
 </owl:NamedIndividual>
 
@@ -739,11 +742,11 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using a small spudger, pull back on the black bar to release the blue lever</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/TAuWhDomSD6ICOYh.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TAuWhDomSD6ICOYh.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/gUBVXCcjkITVFUG1.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gUBVXCcjkITVFUG1.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -751,7 +754,7 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12458"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/WxSRNoB5gxVV6DaX.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WxSRNoB5gxVV6DaX.standard"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_12458">
@@ -759,7 +762,7 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pull up on the metal bar connected to the socket to detach the ribbon cable</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/WxSRNoB5gxVV6DaX.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WxSRNoB5gxVV6DaX.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -767,8 +770,8 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_13075"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/eZTRTWQhAnwxWcjT.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/X1iGHHZrIUe6VE6Q.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/eZTRTWQhAnwxWcjT.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/X1iGHHZrIUe6VE6Q.standard"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_13075">
@@ -776,11 +779,11 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Press in the tab on the bottom right side of the CD drive The tab comes out on its own; there is no need to pull it out manually.</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/eZTRTWQhAnwxWcjT.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/eZTRTWQhAnwxWcjT.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/X1iGHHZrIUe6VE6Q.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/X1iGHHZrIUe6VE6Q.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -788,7 +791,7 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_13079"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/TgPTif6VHSFgNIim.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TgPTif6VHSFgNIim.standard"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_13079">
@@ -796,7 +799,7 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gently pull the tab to remove the disk tray.</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/TgPTif6VHSFgNIim.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TgPTif6VHSFgNIim.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -820,7 +823,7 @@
   <rdf:type rdf:resource="#Item"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Sony Vaio VGN-S260">
+<owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_instance">
   <rdf:type rdf:resource="#Sony_Vaio_VGN_S260"/>
   <isPartOf rdf:resource="#Sony_Laptop"/>
   <isPartOf rdf:resource="#PC_Laptop"/>
@@ -830,7 +833,8 @@
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
-  <isForItem rdf:resource="#Sony Vaio VGN-S260"/>
+  <isForItem rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
+  <rdf:type rdf:resource="#Sub_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Toolbox">
@@ -842,17 +846,18 @@
 
 <owl:NamedIndividual rdf:about="#Upper_Casing">
   <rdf:type rdf:resource="#Part"/>
-  <isPartOf rdf:resource="#Sony Vaio VGN-S260"/>
+  <isPartOf rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Step_11414">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11414"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/2qtXNUeZUOPTmEVr.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/lWfMZPnKXbSrDtBe.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/6RWAhEICt4o1GXOa.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/2qtXNUeZUOPTmEVr.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lWfMZPnKXbSrDtBe.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/6RWAhEICt4o1GXOa.standard"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11414">
@@ -860,15 +865,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the laptop over so the Vaio logo is facing down Locate the battery at the top and Find the release and unlock slides on the battery Slide the unlock tab to the unlock position Slide the release tab in the direction of the arrow, i.e. towards the unlock tab</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/2qtXNUeZUOPTmEVr.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/2qtXNUeZUOPTmEVr.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/lWfMZPnKXbSrDtBe.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lWfMZPnKXbSrDtBe.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/6RWAhEICt4o1GXOa.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/6RWAhEICt4o1GXOa.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -876,9 +881,10 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11417"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/UxVpQcqCDhiwRdVS.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/EENvsrkNMbyhJjSt.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/UxVpQcqCDhiwRdVS.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EENvsrkNMbyhJjSt.standard"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11417">
@@ -886,11 +892,11 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With the tabs still in the unlock position, slide the battery away from the main case.</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/UxVpQcqCDhiwRdVS.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/UxVpQcqCDhiwRdVS.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/EENvsrkNMbyhJjSt.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EENvsrkNMbyhJjSt.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -898,9 +904,10 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11420"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/s4jLnNNhVflEGEsv.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/144Sm1RRKfHeAsAv.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/s4jLnNNhVflEGEsv.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/144Sm1RRKfHeAsAv.standard"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11420">
@@ -908,11 +915,11 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the computer over so the Vaio logo is facedown Unscrew the 2 screws next to the battery</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/s4jLnNNhVflEGEsv.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/s4jLnNNhVflEGEsv.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/144Sm1RRKfHeAsAv.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/144Sm1RRKfHeAsAv.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -920,8 +927,9 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11421"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/SIOmX15FSGhdHVFR.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/SIOmX15FSGhdHVFR.standard"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11421">
@@ -929,7 +937,7 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the computer over again so the Vaio logo is face up Open the lid</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/SIOmX15FSGhdHVFR.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/SIOmX15FSGhdHVFR.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -937,10 +945,11 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11422"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/dl5V2jQnZkf2cgwL.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/oiGLiGDohVPGdsKK.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/dl5V2jQnZkf2cgwL.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/oiGLiGDohVPGdsKK.standard"/>
   <usesTool rdf:resource="#spudger"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11422">
@@ -948,11 +957,11 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Press down on the outer gray shell around the keyboard Use the spudger to gently lift keyboard Do not pull up the keyboard too far as it is attached to a ribbon underneath</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/dl5V2jQnZkf2cgwL.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/dl5V2jQnZkf2cgwL.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/oiGLiGDohVPGdsKK.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/oiGLiGDohVPGdsKK.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -960,9 +969,10 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11423"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/aLkQAZWVgEuHJDwh.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/MKcusjrUmZUKIZVA.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/aLkQAZWVgEuHJDwh.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/MKcusjrUmZUKIZVA.standard"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11423">
@@ -970,11 +980,11 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lift up lever underneath the ribbon to detach the keyboard.</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/aLkQAZWVgEuHJDwh.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/aLkQAZWVgEuHJDwh.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/MKcusjrUmZUKIZVA.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/MKcusjrUmZUKIZVA.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -982,7 +992,8 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_33175"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/lv4W2iJlSs4JiNdy.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lv4W2iJlSs4JiNdy.standard"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_33175">
@@ -990,7 +1001,7 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove memory/wireless compartment cover</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/lv4W2iJlSs4JiNdy.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lv4W2iJlSs4JiNdy.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -998,9 +1009,10 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11425"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/niOJPURiQoDNTGgF.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/DN6kNXK4hqFUMQAF.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/ZI565sLWlIDE6QEF.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/niOJPURiQoDNTGgF.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/DN6kNXK4hqFUMQAF.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ZI565sLWlIDE6QEF.standard"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11425">
@@ -1008,15 +1020,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip so the Vaio Logo is face down Locate and remove a total of 8 screws on the bottom.</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/niOJPURiQoDNTGgF.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/niOJPURiQoDNTGgF.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/DN6kNXK4hqFUMQAF.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/DN6kNXK4hqFUMQAF.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/ZI565sLWlIDE6QEF.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ZI565sLWlIDE6QEF.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -1024,7 +1036,8 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_33174"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/RhVbwkfwcCDbmP6U.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RhVbwkfwcCDbmP6U.standard"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_33174">
@@ -1032,7 +1045,7 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find and remove 5 screws (they all have arrows next to them) from cover</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/RhVbwkfwcCDbmP6U.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RhVbwkfwcCDbmP6U.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -1040,10 +1053,11 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11427"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/QmWABaEnqqelMBNm.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/CBDikjHDsBaTfRVN.standard"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/URHmM5Dsj46YtySt.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QmWABaEnqqelMBNm.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/CBDikjHDsBaTfRVN.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/URHmM5Dsj46YtySt.standard"/>
   <usesTool rdf:resource="#spudger"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11427">
@@ -1051,15 +1065,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the laptop over so the Vaio logo is face up Use the spudger to pop up the upper casing Do not lift too much as the Uppercasing is attached to wires underneath Remove the wires that are attaching the uppercasing to the motherboard</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/QmWABaEnqqelMBNm.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QmWABaEnqqelMBNm.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/CBDikjHDsBaTfRVN.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/CBDikjHDsBaTfRVN.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/URHmM5Dsj46YtySt.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/URHmM5Dsj46YtySt.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -1067,7 +1081,8 @@
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11670"/>
-  <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/PduMKUQ3XlFaOrw4.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/PduMKUQ3XlFaOrw4.standard"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11670">
@@ -1075,7 +1090,7 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the uppercasing</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#https://d3nevzfk7ii3be.cloudfront.net/igi/PduMKUQ3XlFaOrw4.standard">
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/PduMKUQ3XlFaOrw4.standard">
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
@@ -1085,7 +1100,7 @@
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
-  <isForItem rdf:resource="#Sony Vaio VGN-S260"/>
+  <isForItem rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
   <rdf:type rdf:resource="#Sub_Procedure"/>
 </owl:NamedIndividual>
 
@@ -1098,7 +1113,728 @@
 
 <owl:NamedIndividual rdf:about="#Keyboard">
   <rdf:type rdf:resource="#Part"/>
-  <isPartOf rdf:resource="#Sony Vaio VGN-S260"/>
+  <isPartOf rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure">
+  <rdf:type rdf:resource="#Procedure"/>
+  <isForItem rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox">
+  <rdf:type rdf:resource="#Toolbox"/>
+  <isForProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <containsTool rdf:resource="#5mm_nut_driver"/>
+  <containsTool rdf:resource="#ph00_phillips_screwdriver"/>
+  <containsTool rdf:resource="#spudger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Logic_Board">
+  <rdf:type rdf:resource="#Part"/>
+  <isPartOf rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#5mm_nut_driver">
+  <rdf:type rdf:resource="#Tool"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11436">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11436"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BHtuUrtrDVtjV5sY.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ZjPOAgbWweKIbYNm.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11436">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the yellow power adapter Follow its wire to white logic board connector Pull out the wire from white logic board connector</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BHtuUrtrDVtjV5sY.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ZjPOAgbWweKIbYNm.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11650">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11650"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/HXtFZcyo2YHjrPX3.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/CuHsvPOtIqVxeMls.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/DKWsAypFJDKJDEZl.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11650">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the screws on the fan filter casing Remove these screws</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/HXtFZcyo2YHjrPX3.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/CuHsvPOtIqVxeMls.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/DKWsAypFJDKJDEZl.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11437">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11437"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WTQYZr6I2AmlrAIW.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/rbFkwhJiNob3SXkE.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11437">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the screw next to the yellow power adapter Lift out power adapter and fan filter</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WTQYZr6I2AmlrAIW.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/rbFkwhJiNob3SXkE.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11438">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11438"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/e2uGuL1gACrloGaU.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11438">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the screw holding the optical drive casing to the logic board Remove this screw</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/e2uGuL1gACrloGaU.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11642">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11642"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/mJV55uMRUXWoZRTX.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11642">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate ribbon connecting optical drive case to logic board. Pop off the ribbon Remove the metal PC-Card cage</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/mJV55uMRUXWoZRTX.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11640">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11640"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/KuEoUAJoOqjHns5w.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11640">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the four screws holding the optical drive to the logic board Remove the screws</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/KuEoUAJoOqjHns5w.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11439">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11439"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WMhDVjYQVUETHd3f.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TZlrVJvYQsPZCZKO.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11439">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate brown locking tab above optical drive. Lift up on brown locking tab until ribbon is loose Gently slide out and remove the optical drive from the computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WMhDVjYQVUETHd3f.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TZlrVJvYQsPZCZKO.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11446">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11446"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/xcpFxYENS6oULXo2.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TnOdBL1beKD1c1IP.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11446">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the blue ribbon from the Ethernet Circuit Board</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/xcpFxYENS6oULXo2.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TnOdBL1beKD1c1IP.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11683">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11683"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/UZQA11VcIHy6oJnn.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11683">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the screws near the Ethernet Port circuit board Remove the screws.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/UZQA11VcIHy6oJnn.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11445">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11445"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EFiPpTMG3pvBOrhX.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11445">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the screws for the second ethernet circuit board Remove the screws</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EFiPpTMG3pvBOrhX.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11645">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11645"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LLbnyGxbu1yHHifZ.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/cUTmGPmPYMaAANEX.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11645">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the ethernet ports</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LLbnyGxbu1yHHifZ.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/cUTmGPmPYMaAANEX.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11441">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11441"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BxGX1XwHWhCL2cPd.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ONsXf56LAijXQyTD.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11441">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the screws holding the hard drive casing in place. Remove the screws</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BxGX1XwHWhCL2cPd.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ONsXf56LAijXQyTD.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11442">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11442"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gQVHZcTtGUMPQoJN.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11442">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find orange ribbon that is connected to the hard drive. Find the holder of the ribbon and pop the ribbon off from it</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gQVHZcTtGUMPQoJN.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11443">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11443"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1D1yWj3RVXoANgbf.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11443">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the casing and the orange ribbon</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1D1yWj3RVXoANgbf.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11447">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11447"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/pUNnBWwPCdBFqga4.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1Kq1pBHLl3RXvFYf.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11447">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate screws on the logic board Remove the screws</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/pUNnBWwPCdBFqga4.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1Kq1pBHLl3RXvFYf.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11448">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11448"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/nU2GLkXUoAvTDRMS.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/H6NRlyZkgXMEJhAH.standard"/>
+  <usesTool rdf:resource="#5mm_nut_driver"/>
+  <usesTool rdf:resource="#ph00_phillips_screwdriver"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11448">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate nut on logic board Take out the nut using the 5mm nut driver Using a magnetic screwdriver handle will also work as well</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/nU2GLkXUoAvTDRMS.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/H6NRlyZkgXMEJhAH.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11449">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11449"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/XnvOTQgojeCxPAdl.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RPuWHKHlVU1g4XKn.standard"/>
+  <usesTool rdf:resource="#spudger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11449">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the LCD display ribbon It is helpful to use the spudger here This is difficult to remove</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/XnvOTQgojeCxPAdl.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RPuWHKHlVU1g4XKn.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11450">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11450"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/FKJDVd4e2RkvSPOn.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/E2D1cvCFnTvg3aJg.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/MQfYUiwQseSHKesi.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11450">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gently lift the logic board from the laptop. The logic board will be attached to the network wireless chip, which is also attached to the base of the laptop Remove the chip by poping the tabs on the side Slide out the network card You are now free to take the logic board away from the base</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/FKJDVd4e2RkvSPOn.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/E2D1cvCFnTvg3aJg.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/MQfYUiwQseSHKesi.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gateway_SA1_instance">
+  <rdf:type rdf:resource="#Gateway_SA1"/>
+  <isPartOf rdf:resource="#Gateway_Laptop"/>
+  <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#PC"/>
+  <isPartOf rdf:resource="#Root"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gateway_SA1_Screen_Replacement_Procedure">
+  <rdf:type rdf:resource="#Procedure"/>
+  <isForItem rdf:resource="#Gateway_SA1_instance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gateway_SA1_Screen_Replacement_Toolbox">
+  <rdf:type rdf:resource="#Toolbox"/>
+  <isForProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <containsTool rdf:resource="#ph00_phillips_screwdriver"/>
+  <containsTool rdf:resource="#phillips_screwdriver"/>
+  <containsTool rdf:resource="#spudger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Screen">
+  <rdf:type rdf:resource="#Part"/>
+  <isPartOf rdf:resource="#Gateway_SA1_instance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#phillips_screwdriver">
+  <rdf:type rdf:resource="#Tool"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_12620">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12620"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/S6lEYvUrYwibbAWp.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12620">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Move the latch to the right of the battery to unlock.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/S6lEYvUrYwibbAWp.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_12621">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12621"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/KjtYYqwZCqFtLOIo.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12621">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slide the latch on the left directly below the battery to unlock and pull out the battery as shown. The latch must be held in position to remove the battery.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/KjtYYqwZCqFtLOIo.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11608">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11608"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LCfkBnTNChYVdYMZ.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gVpRrDpwsj1yGUDp.standard"/>
+  <usesTool rdf:resource="#spudger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11608">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the hinge covers by lifting each with the sharp point of the spudger. Notice that the middle cover has a different shape and is more difficult to remove.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LCfkBnTNChYVdYMZ.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gVpRrDpwsj1yGUDp.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11612">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11612"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/YP4D3qTGeLYoMIUk.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LEybNoYHPUZHlgGh.standard"/>
+  <usesTool rdf:resource="#spudger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11612">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the six screw covers on the front bezel with the sharp point of the spudger. The bottom two are more difficult to remove.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/YP4D3qTGeLYoMIUk.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LEybNoYHPUZHlgGh.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_12546">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12546"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/cY5WYZeYkfdfr1oK.standard"/>
+  <usesTool rdf:resource="#phillips_screwdriver"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12546">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the six 5.9 mm Philips screws securing the screen bezel.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/cY5WYZeYkfdfr1oK.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11617">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11617"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/Yew3BSYZGCoJZKVF.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/GDguQULjHDZSKJxR.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/b5BZBZGXIRE5ghoF.standard"/>
+  <usesTool rdf:resource="#spudger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11617">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the front bezel by prying it off with the wedged end of the spudger. Verify that your spudger does not touch the LCD. The screen inverter is now exposed below the LCD.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/Yew3BSYZGCoJZKVF.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/GDguQULjHDZSKJxR.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/b5BZBZGXIRE5ghoF.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11621">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11621"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/pf2AyhhWTxiRVTmE.standard"/>
+  <usesTool rdf:resource="#phillips_screwdriver"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11621">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the single 3.8mm Phillips screw mounting the screen inverter to the computer.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/pf2AyhhWTxiRVTmE.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_12553">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12553"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/xgc2vfEYaxVSXmT1.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1ZPxXQxFlrLjQvmc.standard"/>
+  <usesTool rdf:resource="#spudger"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12553">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use your finger, or the spudger, to pry the inverter board out. This exposes the wires behind it.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/xgc2vfEYaxVSXmT1.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1ZPxXQxFlrLjQvmc.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_12547">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12547"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1YjjUawcYCXV4Jfx.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12547">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unplug the LCD back light cables from the right side of the screen inverter.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1YjjUawcYCXV4Jfx.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11623">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11623"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/O14XLW4jFfpOxnTK.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/fqf2lFGvUtZDHBWY.standard"/>
+  <usesTool rdf:resource="#phillips_screwdriver"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11623">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the six screws that mount the screen to the hinge mounts. Two 2.5 mm Phillips screws. Four 3.8 mm Phillips screws.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/O14XLW4jFfpOxnTK.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/fqf2lFGvUtZDHBWY.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_11625">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_11625"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lY4GvfHSv5IhiJGx.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_11625">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unplug the cable from the webcam board. Be gentle, do not use excessive force or you may break the connection.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lY4GvfHSv5IhiJGx.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_12554">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12554"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/P3EWVmjvFMBN45ii.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12554">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Separate the screen from the display cover. Do not touch the back of the screen.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/P3EWVmjvFMBN45ii.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_12051">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12051"/>
+  <hasHazard rdf:resource="#Hazard_12051"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QcgkXfFHy3j2BJJT.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RXPRPDMBw1MSxwps.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12051">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the three tape strips that hold down the cables. Be careful not to tear any of the tape. The piece holding down the webcam wires is especially delicate.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hazard_12051">
+  <rdf:type rdf:resource="#Hazard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QcgkXfFHy3j2BJJT.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RXPRPDMBw1MSxwps.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_12555">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12555"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/6jWSKh3uK36VVfGP.standard"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EFepPgHXZFUT2Xhl.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12555">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unplug the display data cable from the screen connector. This connection is very fragile; do not use excessive force. The screen should now be free from all wire connections.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/6jWSKh3uK36VVfGP.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EFepPgHXZFUT2Xhl.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_12052">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12052"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lFMZGJQDFDSgOTVT.standard"/>
+  <usesTool rdf:resource="#phillips_screwdriver"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12052">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the four 2.8 mm Phillips screws that secure the screen to the mounting bracket using a screwdriver. There will be two screws on either side of the mounting bracket.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lFMZGJQDFDSgOTVT.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Step_12556">
+  <rdf:type rdf:resource="#Step"/>
+  <isPartOfProcedure rdf:resource="#Gateway_SA1_Screen_Replacement_Procedure"/>
+  <hasText rdf:resource="#Text_12556"/>
+  <hasImage rdf:resource="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/evmyWUnlT4WRxNAd.standard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Text_12556">
+  <rdf:type rdf:resource="#Text"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You can now remove and replace the screen.</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/evmyWUnlT4WRxNAd.standard">
+  <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gateway_Laptop">
+  <rdf:type rdf:resource="#Item"/>
 </owl:NamedIndividual>
 
 <swrl:Variable rdf:about="urn:swrl#s"/>

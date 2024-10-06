@@ -269,24 +269,30 @@ def flag_hazards(text):
     return bool(pattern.search(text))
 
 
+def clean_string(input_string):
+    # Replace spaces with underscores and encode special characters
+    cleaned_string = input_string.replace(" ", "_").replace("-", "_")
+    return urllib.parse.quote(cleaned_string)  # URL encode special characters
+
+
 def get_or_create(cls, name):
-    cleaned_name = clean_string(name)
-    instance = cls(cleaned_name)
+    cleaned_name = clean_string(name)  # Generate a URI-friendly name
+    instance = cls(cleaned_name)  # Use the cleaned name to create instance
     if not instance in cls.instances():
-        instance.label = name
+        instance.label = clean_string(name)  # Set human-readable label
         return instance
     return cls(cleaned_name)
 
-# Function to clean and standardize names
-def clean_string(input_string):
-    return input_string.replace(" ", "_").replace("-", "_")
 
-
-def create_class(cls, category):
+def create_class(cls, name):
+    name = clean_string(name)
     cls = getattr(onto, clean_string(cls), None)
     if cls:
-        # If the class exists, create an instance of it
-        return cls(category)  # or cls(category) if you want to pass an argument
+        instance = cls(name)
+        if not instance in cls.instances():
+            instance.label = name
+            return instance
+        return cls(name)
     else:
         # Handle the case where the class does not exist
         print(f"Class {cls} does not exist.")
@@ -295,11 +301,11 @@ def create_class(cls, category):
 
 search_list = ['battery', 'cover', 'screen']
 
-data = selection("app\data\PC.json", 3)
+data = selection("app\data\PC.json", 5)
 # Create instances and relationships
 for item in data:
     # Create Item instance
-    item_instance = create_class(item['Category'], item['Category'])
+    item_instance = create_class(item['Category'], f"{item['Category']}_instance")
     
     # Create Procedure instance
     procedure_instance = get_or_create(Procedure, f"{item['Title']}_Procedure")
