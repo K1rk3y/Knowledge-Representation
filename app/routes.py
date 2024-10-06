@@ -28,7 +28,7 @@ def index():
             
             # Construct SPARQL query
             query = f"""
-                SELECT {subject}
+                SELECT ?s ?p ?o
                 WHERE {{
                     {subject} {predicate} {object} .
                 }}

@@ -574,31 +574,31 @@
 
 <owl:NamedIndividual rdf:about="#Dell Latitude D620">
   <rdf:type rdf:resource="#Dell_Latitude_D620"/>
-  <isPartOf rdf:resource="#Dell Latitude"/>
-  <isPartOf rdf:resource="#Dell Laptop"/>
-  <isPartOf rdf:resource="#PC Laptop"/>
+  <isPartOf rdf:resource="#Dell_Latitude"/>
+  <isPartOf rdf:resource="#Dell_Laptop"/>
+  <isPartOf rdf:resource="#PC_Laptop"/>
   <isPartOf rdf:resource="#PC"/>
   <isPartOf rdf:resource="#Root"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Dell Latitude D620 CD Drive Replacement_Procedure">
+<owl:NamedIndividual rdf:about="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
   <isForItem rdf:resource="#Dell Latitude D620"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Dell Latitude D620 CD Drive Replacement_Toolbox">
+<owl:NamedIndividual rdf:about="#Dell_Latitude_D620_CD_Drive_Replacement_Toolbox">
   <rdf:type rdf:resource="#Toolbox"/>
-  <isForProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
-  <containsTool rdf:resource="#ph00 phillips screwdriver"/>
+  <isForProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+  <containsTool rdf:resource="#ph00_phillips_screwdriver"/>
   <containsTool rdf:resource="#spudger"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CD Drive">
+<owl:NamedIndividual rdf:about="#CD_Drive">
   <rdf:type rdf:resource="#Part"/>
   <isPartOf rdf:resource="#Dell Latitude D620"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#ph00 phillips screwdriver">
+<owl:NamedIndividual rdf:about="#ph00_phillips_screwdriver">
   <rdf:type rdf:resource="#Tool"/>
 </owl:NamedIndividual>
 
@@ -608,7 +608,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_11786">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11786"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/2ahoN1SZaDunCRlW.standard"/>
 </owl:NamedIndividual>
@@ -636,7 +636,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_12017">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12017"/>
   <hasHazard rdf:resource="#Hazard_12017"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/bDghaIwVmHtPtMZQ.standard"/>
@@ -668,10 +668,10 @@
 
 <owl:NamedIndividual rdf:about="#Step_12019">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12019"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/BwGFsYFJ1MNJADcV.standard"/>
-  <usesTool rdf:resource="#ph00 phillips screwdriver"/>
+  <usesTool rdf:resource="#ph00_phillips_screwdriver"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_12019">
@@ -685,7 +685,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_12020">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12020"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/QA5Oqh3xJYJcYJAc.standard"/>
 </owl:NamedIndividual>
@@ -706,7 +706,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_12021">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12021"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/GBUxtBDHiMMIo24Y.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/EsL12USdc1aGVj4E.standard"/>
@@ -727,7 +727,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_12022">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12022"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/TAuWhDomSD6ICOYh.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/gUBVXCcjkITVFUG1.standard"/>
@@ -749,7 +749,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_12458">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_12458"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/WxSRNoB5gxVV6DaX.standard"/>
 </owl:NamedIndividual>
@@ -765,7 +765,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_13075">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_13075"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/eZTRTWQhAnwxWcjT.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/X1iGHHZrIUe6VE6Q.standard"/>
@@ -786,7 +786,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_13079">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Dell Latitude D620 CD Drive Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_13079"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/TgPTif6VHSFgNIim.standard"/>
 </owl:NamedIndividual>
@@ -800,15 +800,15 @@
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Dell Latitude">
+<owl:NamedIndividual rdf:about="#Dell_Latitude">
   <rdf:type rdf:resource="#Item"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Dell Laptop">
+<owl:NamedIndividual rdf:about="#Dell_Laptop">
   <rdf:type rdf:resource="#Item"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#PC Laptop">
+<owl:NamedIndividual rdf:about="#PC_Laptop">
   <rdf:type rdf:resource="#Item"/>
 </owl:NamedIndividual>
 
@@ -822,37 +822,37 @@
 
 <owl:NamedIndividual rdf:about="#Sony Vaio VGN-S260">
   <rdf:type rdf:resource="#Sony_Vaio_VGN_S260"/>
-  <isPartOf rdf:resource="#Sony Laptop"/>
-  <isPartOf rdf:resource="#PC Laptop"/>
+  <isPartOf rdf:resource="#Sony_Laptop"/>
+  <isPartOf rdf:resource="#PC_Laptop"/>
   <isPartOf rdf:resource="#PC"/>
   <isPartOf rdf:resource="#Root"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure">
+<owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
   <isForItem rdf:resource="#Sony Vaio VGN-S260"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Sony Vaio VGN-S260 Upper Casing Replacement_Toolbox">
+<owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Toolbox">
   <rdf:type rdf:resource="#Toolbox"/>
-  <isForProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
-  <containsTool rdf:resource="#ph00 phillips screwdriver"/>
+  <isForProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+  <containsTool rdf:resource="#ph00_phillips_screwdriver"/>
   <containsTool rdf:resource="#spudger"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Upper Casing">
+<owl:NamedIndividual rdf:about="#Upper_Casing">
   <rdf:type rdf:resource="#Part"/>
   <isPartOf rdf:resource="#Sony Vaio VGN-S260"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Step_11414">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11414"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/2qtXNUeZUOPTmEVr.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/lWfMZPnKXbSrDtBe.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/6RWAhEICt4o1GXOa.standard"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11414">
@@ -874,11 +874,11 @@
 
 <owl:NamedIndividual rdf:about="#Step_11417">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11417"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/UxVpQcqCDhiwRdVS.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/EENvsrkNMbyhJjSt.standard"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11417">
@@ -896,11 +896,11 @@
 
 <owl:NamedIndividual rdf:about="#Step_11420">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11420"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/s4jLnNNhVflEGEsv.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/144Sm1RRKfHeAsAv.standard"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11420">
@@ -918,10 +918,10 @@
 
 <owl:NamedIndividual rdf:about="#Step_11421">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11421"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/SIOmX15FSGhdHVFR.standard"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11421">
@@ -935,12 +935,12 @@
 
 <owl:NamedIndividual rdf:about="#Step_11422">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11422"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/dl5V2jQnZkf2cgwL.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/oiGLiGDohVPGdsKK.standard"/>
   <usesTool rdf:resource="#spudger"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11422">
@@ -958,11 +958,11 @@
 
 <owl:NamedIndividual rdf:about="#Step_11423">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11423"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/aLkQAZWVgEuHJDwh.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/MKcusjrUmZUKIZVA.standard"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Text_11423">
@@ -980,7 +980,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_33175">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_33175"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/lv4W2iJlSs4JiNdy.standard"/>
 </owl:NamedIndividual>
@@ -996,7 +996,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_11425">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11425"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/niOJPURiQoDNTGgF.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/DN6kNXK4hqFUMQAF.standard"/>
@@ -1022,7 +1022,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_33174">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_33174"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/RhVbwkfwcCDbmP6U.standard"/>
 </owl:NamedIndividual>
@@ -1038,7 +1038,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_11427">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11427"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/QmWABaEnqqelMBNm.standard"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/CBDikjHDsBaTfRVN.standard"/>
@@ -1065,7 +1065,7 @@
 
 <owl:NamedIndividual rdf:about="#Step_11670">
   <rdf:type rdf:resource="#Step"/>
-  <isPartOfProcedure rdf:resource="#Sony Vaio VGN-S260 Upper Casing Replacement_Procedure"/>
+  <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
   <hasText rdf:resource="#Text_11670"/>
   <hasImage rdf:resource="#https://d3nevzfk7ii3be.cloudfront.net/igi/PduMKUQ3XlFaOrw4.standard"/>
 </owl:NamedIndividual>
@@ -1079,20 +1079,20 @@
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Sony Laptop">
+<owl:NamedIndividual rdf:about="#Sony_Laptop">
   <rdf:type rdf:resource="#Item"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure">
+<owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
   <isForItem rdf:resource="#Sony Vaio VGN-S260"/>
   <rdf:type rdf:resource="#Sub_Procedure"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Sony Vaio VGN-S260 Keyboard Replacement_Toolbox">
+<owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Toolbox">
   <rdf:type rdf:resource="#Toolbox"/>
-  <isForProcedure rdf:resource="#Sony Vaio VGN-S260 Keyboard Replacement_Procedure"/>
-  <containsTool rdf:resource="#ph00 phillips screwdriver"/>
+  <isForProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+  <containsTool rdf:resource="#ph00_phillips_screwdriver"/>
   <containsTool rdf:resource="#spudger"/>
 </owl:NamedIndividual>
 

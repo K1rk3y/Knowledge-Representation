@@ -269,17 +269,17 @@ def flag_hazards(text):
     return bool(pattern.search(text))
 
 
-# Function to get or create an instance
 def get_or_create(cls, name):
-    instance = cls(name)
+    cleaned_name = clean_string(name)
+    instance = cls(cleaned_name)
     if not instance in cls.instances():
+        instance.label = name
         return instance
-    return cls(name)
+    return cls(cleaned_name)
 
-
+# Function to clean and standardize names
 def clean_string(input_string):
-    cleaned_string = input_string.replace(" ", "_").replace("-", "_")
-    return cleaned_string
+    return input_string.replace(" ", "_").replace("-", "_")
 
 
 def create_class(cls, category):
@@ -295,7 +295,7 @@ def create_class(cls, category):
 
 search_list = ['battery', 'cover', 'screen']
 
-data = selection("PC.json", 3)
+data = selection("app\data\PC.json", 3)
 # Create instances and relationships
 for item in data:
     # Create Item instance
