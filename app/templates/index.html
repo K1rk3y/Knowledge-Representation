@@ -140,6 +140,23 @@
         .zoom-controls button:hover {
             background-color: #2980b9;
         }
+
+        #info-box {
+        display: none;
+        position: absolute;
+        background: #ffffff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+        max-width: 300px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        overflow: auto;
+        word-wrap: break-word;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
                
     </style>
 
@@ -204,6 +221,8 @@
             <button onclick="zoomOut()">−</button>
             <button onclick="resetZoom()">Reset</button>
         </div>
+
+        <div id="info-box"></div>
     </div>
 
     <script>
@@ -229,6 +248,90 @@
             var height = svg.getAttribute('height');
             svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const nodes = document.querySelectorAll('.node');
+        nodes.forEach(function(node) {
+            node.addEventListener('click', function(event) {
+                // Prevent event bubbling
+                event.stopPropagation();
+
+                // Get node label and relationships
+                const label = node.getAttribute('data-node-label');
+                const relationshipsEncoded = node.getAttribute('data-relationships');
+                const relationshipsJson = atob(relationshipsEncoded);
+                const relationships = JSON.parse(relationshipsJson);
+
+                // Separate incoming and outgoing relationships
+                const incoming = relationships.filter(rel => rel.direction === 'incoming');
+                const outgoing = relationships.filter(rel => rel.direction === 'outgoing');
+
+                // Build the content for the info box
+                let content = '<strong>' + label + '</strong><br/>';
+
+                if (outgoing.length > 0) {
+                    content += '<em>Outgoing Relationships:</em><ul>';
+                    outgoing.forEach(function(rel) {
+                        content += '<li>' + rel.predicate + ' &rarr; ' + rel.target + '</li>';
+                    });
+                    content += '</ul>';
+                }
+
+                if (incoming.length > 0) {
+                    content += '<em>Incoming Relationships:</em><ul>';
+                    incoming.forEach(function(rel) {
+                        content += '<li>' + rel.predicate + ' &larr; ' + rel.target + '</li>';
+                    });
+                    content += '</ul>';
+                }
+
+                // Position the info box near the node
+                const bbox = node.getBoundingClientRect();
+                const svgContainer = document.getElementById('svg-container');
+                const containerRect = svgContainer.getBoundingClientRect();
+                const infoBox = document.getElementById('info-box');
+                infoBox.innerHTML = content;
+                infoBox.style.display = 'block';
+
+                // Calculate position
+                let left = bbox.left - containerRect.left + bbox.width / 2;
+                let top = bbox.top - containerRect.top + bbox.height / 2;
+
+                // Adjust position if the info box goes beyond the container
+                const infoBoxRect = infoBox.getBoundingClientRect();
+                const containerWidth = containerRect.width;
+                const containerHeight = containerRect.height;
+
+                // Wait for the info box to render to get accurate dimensions
+                setTimeout(function() {
+                    const infoBoxRect = infoBox.getBoundingClientRect();
+
+                    // Check right boundary
+                    if (left + infoBoxRect.width > containerWidth) {
+                        left = containerWidth - infoBoxRect.width - 10;  // 10px padding
+                    }
+
+                    // Check bottom boundary
+                    if (top + infoBoxRect.height > containerHeight) {
+                        top = containerHeight - infoBoxRect.height - 10;
+                    }
+
+                    // Ensure left and top are not negative
+                    if (left < 0) left = 10;
+                    if (top < 0) top = 10;
+
+                    infoBox.style.left = left + 'px';
+                    infoBox.style.top = top + 'px';
+                }, 0); // Run after the current call stack
+            });
+        });
+
+        // Hide the info box when clicking elsewhere
+        document.addEventListener('click', function() {
+            const infoBox = document.getElementById('info-box');
+            infoBox.style.display = 'none';
+        });
+    });
     </script>
 </body>
 </html>

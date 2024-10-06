@@ -4,6 +4,8 @@ from urllib.parse import urlparse
 import math
 import re
 from collections import defaultdict
+import json
+import base64 
 
 main = Blueprint('main', __name__)
 
@@ -178,6 +180,11 @@ def get_readable_label(uri):
         return str(uri)
 
 def generate_svg(triples):
+    import math
+    from collections import defaultdict
+    import json
+    import base64
+
     svg_elements = []
     
     # Configuration
@@ -194,6 +201,22 @@ def generate_svg(triples):
         nodes.add(str(obj))
         relationships.append((str(subject), get_readable_label(predicate), str(obj)))
     
+    # Build relationships for each node
+    node_relationships = defaultdict(list)
+    for subject, predicate_label, obj in relationships:
+        # Outgoing relationship
+        node_relationships[subject].append({
+            'predicate': predicate_label,
+            'target': get_readable_label(obj),
+            'direction': 'outgoing'
+        })
+        # Incoming relationship
+        node_relationships[obj].append({
+            'predicate': predicate_label,
+            'target': get_readable_label(subject),
+            'direction': 'incoming'
+        })
+    
     # Calculate layout with blank nodes positioned differently
     nodes = list(nodes)
     regular_nodes = [n for n in nodes if not is_blank_node(n)]
@@ -201,7 +224,7 @@ def generate_svg(triples):
     
     # Position regular nodes in a grid
     node_positions = {}
-    cols = math.ceil(math.sqrt(len(regular_nodes)))
+    cols = max(1, math.ceil(math.sqrt(len(regular_nodes))))
     for i, node in enumerate(regular_nodes):
         row = i // cols
         col = i % cols
@@ -250,14 +273,16 @@ def generate_svg(triples):
     for subject, predicate, obj in relationships:
         if subject not in node_positions or obj not in node_positions:
             continue
-            
+                
         start_x, start_y = node_positions[subject]
         end_x, end_y = node_positions[obj]
         
         # Calculate direction and shorten path to end at node border
         dx = end_x - start_x
         dy = end_y - start_y
-        distance = math.sqrt(dx ** 2 + dy ** 2)
+        distance = math.hypot(dx, dy)
+        if distance == 0:
+            distance = 1  # Prevent division by zero
         unit_dx = dx / distance
         unit_dy = dy / distance
 
@@ -271,38 +296,41 @@ def generate_svg(triples):
         mid_x = (start_x + end_x) / 2
         mid_y = (start_y + end_y) / 2 - 60  # Adjust for a smoother curve
 
+        path_id = f'path-{len(svg_elements)}'
+
         path = f'M {start_x},{start_y} Q {mid_x},{mid_y} {end_x},{end_y}'
-
-        # Determine if text should be flipped based on line direction
-        if start_x > end_x:
-            text_anchor = "end"
-        else:
-            text_anchor = "start"
-
+    
         svg_elements.append(f'''
-            <path d="{path}" fill="none" stroke="#333" stroke-width="2" 
+            <path id="{path_id}" d="{path}" fill="none" stroke="#333" stroke-width="2" 
                 marker-end="url(#arrowhead)" opacity="0.8"/>
-            <text>
-                <textPath href="#text-path-{len(svg_elements)}" startOffset="50%" text-anchor="{text_anchor}" fill="#333" font-size="12px">
+            <text dy="-5">
+                <textPath href="#{path_id}" startOffset="50%" text-anchor="middle" fill="#333" font-size="12px">
                     {predicate}
                 </textPath>
             </text>
-            <path id="text-path-{len(svg_elements)}" d="{path}" fill="none" stroke="none"/>
         ''')
     
     # Draw nodes
     for node, (x, y) in node_positions.items():
-        label = get_readable_label(node)
+        full_label = get_readable_label(node)  # Use full label for data attributes
         is_blank = is_blank_node(node)
         gradient = "url(#blankNodeGradient)" if is_blank else "url(#nodeGradient)"
         radius = node_radius * 0.8 if is_blank else node_radius
 
-        # Truncate label if too long
+        # Truncate label if too long for display on the node
+        label = full_label
         if len(label) > 15:
             label = label[:12] + '...'
 
+        # Get relationships for this node
+        relationships_data = node_relationships.get(node, [])
+        relationships_json = json.dumps(relationships_data)
+        encoded_relationships = base64.b64encode(relationships_json.encode('utf-8')).decode('utf-8')
+
+        # Create the node SVG element with data attributes
         svg_elements.append(f'''
-            <g class="node" transform="translate({x},{y})">
+            <g class="node" transform="translate({x},{y})" 
+               data-node-id="{node}" data-node-label="{full_label}" data-relationships="{encoded_relationships}">
                 <circle r="{radius}" fill="{gradient}" 
                     stroke="#7f8c8d" stroke-width="{1 if is_blank else 2}"
                     opacity="0.9"
