@@ -10,50 +10,74 @@ def index():
     # Load the RDF/XML file
     g = Graph()
     g.parse("app/data/ifix-it-ontology.owl", format="xml")
-    
+
     svg_content = None
     error_message = None
-    
+
     if request.method == 'POST':
         try:
-            # Get form data
-            subject = request.form.get('subject', '?s')
-            predicate = request.form.get('predicate', '?p')
-            object = request.form.get('object', '?o')
-            
-            # If fields are empty, replace with variables
-            subject = f"?s" if not subject.strip() else f"<{subject}>" if not subject.startswith('?') else subject
-            predicate = f"?p" if not predicate.strip() else f"<{predicate}>" if not predicate.startswith('?') else predicate
-            object = f"?o" if not object.strip() else f"<{object}>" if not object.startswith('?') else object
-            
+            # Get lists of form data
+            subjects = request.form.getlist('subject[]')
+            predicates = request.form.getlist('predicate[]')
+            objects = request.form.getlist('object[]')
+
+            # Initialize variables set and triples list
+            variables = set()
+            triple_patterns = []
+
+            # Process each triple pattern
+            for s, p, o in zip(subjects, predicates, objects):
+                # If fields are empty, replace with variables
+                s = f"?s" if not s.strip() else f"<{s}>" if not s.startswith('?') else s
+                p = f"?p" if not p.strip() else f"<{p}>" if not p.startswith('?') else p
+                o = f"?o" if not o.strip() else f"<{o}>" if not o.startswith('?') else o
+
+                # Collect variables for SELECT clause
+                for term in [s, p, o]:
+                    if term.startswith('?'):
+                        variables.add(term)
+
+                triple_patterns.append(f"{s} {p} {o} .")
+
             # Construct SPARQL query
+            where_clause = '\n    '.join(triple_patterns)
+            select_clause = ' '.join(variables) if variables else '*'
             query = f"""
-                SELECT ?s ?p ?o
+                SELECT {select_clause}
                 WHERE {{
-                    {subject} {predicate} {object} .
+                    {where_clause}
                 }}
             """
-            
+
             # Execute query
             results = g.query(query)
-            
+
             # Convert results to triples
-            triples = [(str(row.s), row.p, str(row.o)) for row in results]
-            
+            triples = []
+            for row in results:
+                # Since row is a tuple, we need to map variables to their values
+                binding = {str(var): str(val) for var, val in row.asdict().items()}
+                # For visualization, we need to reconstruct the triples
+                for s, p, o in zip(subjects, predicates, objects):
+                    s_val = binding.get(s.strip('?'), s) if s.startswith('?') else s
+                    p_val = binding.get(p.strip('?'), p) if p.startswith('?') else p
+                    o_val = binding.get(o.strip('?'), o) if o.startswith('?') else o
+                    triples.append((s_val, p_val, o_val))
+
             if not triples:
                 error_message = "No results found for this query."
             else:
                 # Generate SVG from query results
                 svg_content = generate_svg(triples)
-                
+
         except Exception as e:
             error_message = f"Error executing query: {str(e)}"
-    
+
     # For GET request or if no results, show empty form
     if svg_content is None and not error_message:
         # Generate default visualization with empty SVG
         svg_content = '<svg width="800" height="100"><text x="400" y="50" text-anchor="middle">Enter a query to visualize the results</text></svg>'
-    
+
     return render_template('index.html', 
                          svg_content=svg_content,
                          error_message=error_message)

@@ -120,30 +120,49 @@
         }
                
     </style>
+
+    <script>
+        function addTriplePattern() {
+            var container = document.getElementById('triple-patterns-container');
+            var triplePattern = document.querySelector('.triple-pattern').cloneNode(true);
+
+            // Reset the input fields
+            var inputs = triplePattern.querySelectorAll('input[type="text"]');
+            inputs.forEach(function(input) {
+                input.value = '';
+            });
+
+            container.appendChild(triplePattern);
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>RDF Knowledge Graph Visualization</h1>
         
-        <div class="query-form">
+         <div class="query-form">
             <form method="POST">
-                <span class="static-text">Find all</span>
-                <input type="text" name="subject" placeholder="?s or URI">
-                <div class="tooltip">ⓘ
-                    <span class="tooltip-text">Enter a URI or use ?s for any subject</span>
+                <div id="triple-patterns-container">
+                    <div class="triple-pattern">
+                        <span class="static-text">Find all</span>
+                        <input type="text" name="subject[]" placeholder="?s or URI">
+                        <div class="tooltip">ⓘ
+                            <span class="tooltip-text">Enter a URI or use ?s for any subject</span>
+                        </div>
+
+                        <span class="static-text">that</span>
+                        <input type="text" name="predicate[]" placeholder="?p or URI">
+                        <div class="tooltip">ⓘ
+                            <span class="tooltip-text">Enter a URI or use ?p for any predicate</span>
+                        </div>
+
+                        <input type="text" name="object[]" placeholder="?o or URI">
+                        <div class="tooltip">ⓘ
+                            <span class="tooltip-text">Enter a URI or use ?o for any object</span>
+                        </div>
+                    </div>
                 </div>
-                
-                <span class="static-text">that</span>
-                <input type="text" name="predicate" placeholder="?p or URI">
-                <div class="tooltip">ⓘ
-                    <span class="tooltip-text">Enter a URI or use ?p for any predicate</span>
-                </div>
-                
-                <input type="text" name="object" placeholder="?o or URI">
-                <div class="tooltip">ⓘ
-                    <span class="tooltip-text">Enter a URI or use ?o for any object</span>
-                </div>
-                
+                <button type="button" onclick="addTriplePattern()">Add more fields</button>
                 <input type="submit" value="Visualize">
             </form>
         </div>
