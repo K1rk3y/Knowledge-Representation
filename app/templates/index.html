@@ -9,7 +9,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f8f9fa;
+            background-color: #ecf0f1;
             min-height: 100vh;
         }
         
@@ -28,7 +28,7 @@
         
         /* Query Form Styling */
         .query-form {
-            background: white;
+            background: #ffffff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -45,12 +45,13 @@
         
         .query-form input[type="text"] {
             padding: 8px 12px;
-            border: 1px solid #ddd;
+            border: 1px solid #bdc3c7;
             border-radius: 4px;
             font-size: 14px;
             width: 200px;
         }
         
+        .query-form button,
         .query-form input[type="submit"] {
             padding: 8px 20px;
             background-color: #3498db;
@@ -61,6 +62,7 @@
             font-size: 14px;
         }
         
+        .query-form button:hover,
         .query-form input[type="submit"]:hover {
             background-color: #2980b9;
         }
@@ -78,7 +80,7 @@
             text-align: center;
         }
         
-        /* Tooltip styling */
+
         .tooltip {
             position: relative;
             display: inline-block;
@@ -108,7 +110,6 @@
             opacity: 1;
         }
         
-        /* Previous CSS styles remain the same */
         #svg-container {
             background: white;
             border-radius: 10px;
@@ -117,6 +118,27 @@
             margin: 20px auto;
             overflow: auto;
             min-height: 400px;
+        }
+
+
+        .zoom-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .zoom-controls button {
+            padding: 10px 15px;
+            margin: 0 5px;
+            font-size: 16px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .zoom-controls button:hover {
+            background-color: #2980b9;
         }
                
     </style>
@@ -176,16 +198,37 @@
         <div id="svg-container">
             {{ svg_content | safe }}
         </div>
-    </div>
-    
-    <div class="zoom-controls">
-        <button onclick="zoomIn()">+</button>
-        <button onclick="zoomOut()">-</button>
-        <button onclick="resetZoom()">Reset</button>
+
+        <div class="zoom-controls">
+            <button onclick="zoomIn()">+</button>
+            <button onclick="zoomOut()">−</button>
+            <button onclick="resetZoom()">Reset</button>
+        </div>
     </div>
 
     <script>
-        // [Previous JavaScript for zoom and pan functionality remains the same]
+        function zoomIn() {
+            var svg = document.querySelector('#svg-container svg');
+            var viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+            var newWidth = viewBox[2] * 0.8;
+            var newHeight = viewBox[3] * 0.8;
+            svg.setAttribute('viewBox', `${viewBox[0]} ${viewBox[1]} ${newWidth} ${newHeight}`);
+        }
+
+        function zoomOut() {
+            var svg = document.querySelector('#svg-container svg');
+            var viewBox = svg.getAttribute('viewBox').split(' ').map(Number);
+            var newWidth = viewBox[2] / 0.8;
+            var newHeight = viewBox[3] / 0.8;
+            svg.setAttribute('viewBox', `${viewBox[0]} ${viewBox[1]} ${newWidth} ${newHeight}`);
+        }
+
+        function resetZoom() {
+            var svg = document.querySelector('#svg-container svg');
+            var width = svg.getAttribute('width');
+            var height = svg.getAttribute('height');
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        }
     </script>
 </body>
 </html>
