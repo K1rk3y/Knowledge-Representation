@@ -397,4 +397,4 @@ with onto:
 # sync_reasoner()
 
 # Save the ontology
-onto.save(file="ifix-it-ontology.owl", format="rdfxml")
+onto.save(file="app\data\ifix-it-ontology.owl", format="rdfxml")
