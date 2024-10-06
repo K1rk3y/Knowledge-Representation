@@ -22,6 +22,10 @@ def index():
     g = Graph()
     g.parse("app/data/ifix-it-ontology.owl", format="xml")
 
+    prefixes = {
+        '': 'http://cits3005.org/pc-ontology.owl#',  # Default namespace
+    }
+
     svg_content = None
     error_message = None
 
@@ -38,16 +42,21 @@ def index():
 
             # Process each triple pattern
             for s, p, o in zip(subjects, predicates, objects):
+                # Strip whitespace
+                s = s.strip()
+                p = p.strip()
+                o = o.strip()
+            
                 # If fields are empty, replace with variables
-                s = f"?s" if not s.strip() else f"<{s}>" if not s.startswith('?') else s
-                p = f"?p" if not p.strip() else f"<{p}>" if not p.startswith('?') else p
-                o = f"?o" if not o.strip() else f"<{o}>" if not o.startswith('?') else o
-
+                s = f"?s" if not s else expand_term(s, prefixes)
+                p = f"?p" if not p else expand_term(p, prefixes)
+                o = f"?o" if not o else expand_term(o, prefixes)
+            
                 # Collect variables for SELECT clause
                 for term in [s, p, o]:
                     if term.startswith('?'):
                         variables.add(term)
-
+            
                 triple_patterns.append(f"{s} {p} {o} .")
 
             # Construct SPARQL query
@@ -90,6 +99,24 @@ def index():
     return render_template('index.html', 
                          svg_content=svg_content,
                          error_message=error_message)
+
+def expand_term(term, prefixes):
+    if term.startswith('?'):
+        return term
+    if term.startswith('<') and term.endswith('>'):
+        return term  # Already a full URI
+    if term.startswith('http://') or term.startswith('https://'):
+        return f"<{term}>"
+    if ':' in term:
+        prefix, local = term.split(':', 1)
+        if prefix in prefixes:
+            return f"<{prefixes[prefix]}{local}>"
+        else:
+            raise ValueError(f"Unknown prefix '{prefix}' in term '{term}'")
+    else:
+        # Default namespace
+        return f"<{prefixes['']}{term}>"
+
 
 def get_blank_node_label(node):
     """Get a consistent human-readable label for blank nodes"""
