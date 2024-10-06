@@ -181,9 +181,9 @@ def generate_svg(triples):
     svg_elements = []
     
     # Configuration
-    node_radius = 30
-    node_spacing_x = 200
-    node_spacing_y = 150
+    node_radius = 40
+    node_spacing_x = 300
+    node_spacing_y = 200
     margin = 100
     
     # Collect unique nodes and their relationships
@@ -222,7 +222,7 @@ def generate_svg(triples):
             # Position blank node between its connected nodes
             avg_x = sum(node_positions[n][0] for n in connected_nodes) / len(connected_nodes)
             avg_y = sum(node_positions[n][1] for n in connected_nodes) / len(connected_nodes)
-            node_positions[blank_node] = (avg_x, avg_y - node_spacing_y/2)
+            node_positions[blank_node] = (avg_x, avg_y - node_spacing_y / 2)
         else:
             # If no connections found, place at the bottom
             max_y = max(y for _, y in node_positions.values()) if node_positions else margin
@@ -232,8 +232,8 @@ def generate_svg(triples):
     svg_elements.append('''
         <defs>
             <radialGradient id="nodeGradient">
-                <stop offset="0%" stop-color="#6bb9f0"/>
-                <stop offset="100%" stop-color="#19b5fe"/>
+                <stop offset="0%" stop-color="#85C1E9"/>
+                <stop offset="100%" stop-color="#3498db"/>
             </radialGradient>
             <radialGradient id="blankNodeGradient">
                 <stop offset="0%" stop-color="#95a5a6"/>
@@ -241,30 +241,49 @@ def generate_svg(triples):
             </radialGradient>
             <marker id="arrowhead" markerWidth="10" markerHeight="7" 
                 refX="9" refY="3.5" orient="auto">
-                <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+                <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
             </marker>
         </defs>
     ''')
     
-    # Draw relationships
+    # Draw relationships with curved lines
     for subject, predicate, obj in relationships:
         if subject not in node_positions or obj not in node_positions:
             continue
             
-        start = node_positions[subject]
-        end = node_positions[obj]
+        start_x, start_y = node_positions[subject]
+        end_x, end_y = node_positions[obj]
         
-        # Calculate line middle point for curved paths
-        mid_x = (start[0] + end[0]) / 2
-        mid_y = (start[1] + end[1]) / 2 - 40
-        
-        path = f'M {start[0]},{start[1]} Q {mid_x},{mid_y} {end[0]},{end[1]}'
-        
+        # Calculate direction and shorten path to end at node border
+        dx = end_x - start_x
+        dy = end_y - start_y
+        distance = math.sqrt(dx ** 2 + dy ** 2)
+        unit_dx = dx / distance
+        unit_dy = dy / distance
+
+        # Adjust start and end points to be at the border of the nodes
+        start_x += unit_dx * node_radius
+        start_y += unit_dy * node_radius
+        end_x -= unit_dx * node_radius
+        end_y -= unit_dy * node_radius
+
+        # Calculate control point for the curved line
+        mid_x = (start_x + end_x) / 2
+        mid_y = (start_y + end_y) / 2 - 60  # Adjust for a smoother curve
+
+        path = f'M {start_x},{start_y} Q {mid_x},{mid_y} {end_x},{end_y}'
+
+        # Determine if text should be flipped based on line direction
+        if start_x > end_x:
+            text_anchor = "end"
+        else:
+            text_anchor = "start"
+
         svg_elements.append(f'''
-            <path d="{path}" fill="none" stroke="#666" stroke-width="2" 
-                marker-end="url(#arrowhead)" opacity="0.6"/>
+            <path d="{path}" fill="none" stroke="#333" stroke-width="2" 
+                marker-end="url(#arrowhead)" opacity="0.8"/>
             <text>
-                <textPath href="#text-path-{len(svg_elements)}" startOffset="50%" text-anchor="middle">
+                <textPath href="#text-path-{len(svg_elements)}" startOffset="50%" text-anchor="{text_anchor}" fill="#333" font-size="12px">
                     {predicate}
                 </textPath>
             </text>
@@ -277,7 +296,11 @@ def generate_svg(triples):
         is_blank = is_blank_node(node)
         gradient = "url(#blankNodeGradient)" if is_blank else "url(#nodeGradient)"
         radius = node_radius * 0.8 if is_blank else node_radius
-        
+
+        # Truncate label if too long
+        if len(label) > 15:
+            label = label[:12] + '...'
+
         svg_elements.append(f'''
             <g class="node" transform="translate({x},{y})">
                 <circle r="{radius}" fill="{gradient}" 
@@ -285,7 +308,7 @@ def generate_svg(triples):
                     opacity="0.9"
                     onmouseover="this.style.opacity = 1;"
                     onmouseout="this.style.opacity = 0.9;"/>
-                <text text-anchor="middle" dy=".3em" fill="white" 
+                <text text-anchor="middle" dy=".3em" fill="#2c3e50" 
                     font-size="{10 if is_blank else 12}px" 
                     font-weight="{400 if is_blank else 700}">{label}</text>
             </g>
