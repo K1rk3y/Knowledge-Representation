@@ -1,7 +1,7 @@
+from owlready2 import *
 import json
-from collections import Counter
-from typing import Any, Dict, List
-from rdflib import Graph
+
+onto = get_ontology("app\data\ifix-it-ontology.owl").load()
 
 
 def selection(file_path, num):
@@ -17,183 +17,130 @@ def selection(file_path, num):
     return objects[:num]
 
 
-def extract_classes(json_obj: dict, string_list: List[str]) -> tuple[Dict[str, List[str]], Dict[str, List[str]]]:
-    top_level_keys = set()
-    nested_keys = set()
-
-    def process_nested(obj: Any, prefix: str = ""):
-        if isinstance(obj, dict):
-            for key, value in obj.items():
-                new_prefix = f"{prefix}-{key}" if prefix else key
-                nested_keys.add(new_prefix)
-                process_nested(value, new_prefix)
-        elif isinstance(obj, list):
-            for item in obj:
-                process_nested(item, prefix)
-        
-    def partition(s: str, n: int) -> List[str]:
-        s = s.lower()
-        return [s[i:i+n] for i in range(len(s) - n + 1)]
-
-    def ngram_similarity(key: str, s: str, n: int) -> float:
-        key_ngrams = partition(key, n)
-        s_ngrams = partition(s, n)
-
-        key_counter = Counter(key_ngrams)
-        s_counter = Counter(s_ngrams)
-
-        common_ngrams = sum((key_counter & s_counter).values())
-        total_ngrams = sum(key_counter.values())
-
-        if total_ngrams == 0:
-            return 0.0
-
-        return common_ngrams / total_ngrams
-
-    def match_substrings(key: str, string_list: List[str], n: int = 3, threshold: float = 0.3) -> List[str]:
-        matched_strings = []
-        for s in string_list:
-            similarity = ngram_similarity(key, s, n)
-            if similarity >= threshold:
-                matched_strings.append(s)
-        
-        return matched_strings
-
-    for key, value in json_obj.items():
-        top_level_keys.add(key)
-        process_nested(value, key)
-
-    top_level_dict = {key: match_substrings(key, string_list) for key in top_level_keys}
-    nested_dict = {key for key in nested_keys}
-
-    return top_level_dict, nested_dict
-
-
-def process_nested(obj: Any, prefix: str = "", nested_keys=None):
-    if nested_keys is None:
-        nested_keys = set()
-
-    if isinstance(obj, dict):
-        for key, value in obj.items():
-            new_prefix = f"{prefix}-{key}" if prefix else key
-            nested_keys.add(new_prefix)
-            process_nested(value, new_prefix, nested_keys)
-    elif isinstance(obj, list):
-        for item in obj:
-            process_nested(item, prefix, nested_keys)
-
-    return nested_keys
-
-
-def extract_entities(json_obj, parent_id=None):
-    result = []
-
-    def process_layer(layer, parent_id=None, parent_key_prefix=""):
-        extracted_layer = {}
-        nested_keys = []
-
-        # Check if there's an "id" key in the current layer
-        layer_id = None
-        for key, value in layer.items():
-            if "id" in key.lower():
-                layer_id = value
-                break
-
-        # If no ID key in the current layer, use parent ID
-        if layer_id is None and parent_id:
-            layer_id = parent_id
-
-        for key, value in layer.items():
-            # Prepend parent keys to current key using the prefix
-            full_key = f"{parent_key_prefix}-{key}" if parent_key_prefix else key
-
-            if isinstance(value, list) and all(isinstance(i, dict) for i in value):
-                # Mark nested lists as "NESTED" and track them for recursion
-                extracted_layer[f"{full_key}_{layer_id}"] = "NESTED"
-                nested_keys.append((full_key, value))
-            else:
-                extracted_layer[f"{full_key}_{layer_id}"] = value
-
-        result.append(extracted_layer)
-
-        for full_key, nested_value in nested_keys:
-            for nested_layer in nested_value:
-                process_layer(nested_layer, layer_id, full_key)
-
-    process_layer(json_obj, parent_id)
-    return result
-
-
-def parse(file_path):
-    objects = None
-    entity_relations = []
-    values = []
-    string_list = ["hasAncestor", "hasGuidid", "hasCategory", "hasUrl", "hasThumbnail", "hasStepLine", "hasStepImage", "hasStepId", "hasTitle", "hasTool", "hasSubject", "hasStepTextRaw", "hasStepOrder", "hasStepTool"]
-  
-    objects = selection(file_path, 1)
- 
-    for object in objects:
-        top, nested = extract_classes(object, string_list)
-        entities = extract_entities(object)
-
-        entity_relations.append(top)
-        entity_relations.append(nested)
-        values.append(entities)
-
-    return entity_relations, values
-
-
-def parse_subset(file_path):
-    json_objects = selection(file_path, 100)
-    result = set()
+def extract_parts(text_raw, noun_list):
+    # Convert the text to lowercase for case-insensitive matching
+    text_lower = text_raw.lower()
     
-    for i, json_obj in enumerate(json_objects):
-       
-        result.add(json_obj['Category'])
+    # Initialize an empty list to store found nouns
+    found_parts = []
     
-    return result
+    # Iterate through the noun list
+    for noun in noun_list:
+        # Check if the lowercase noun is in the lowercase text
+        if noun.lower() in text_lower:
+            found_parts.append(noun)
+    
+    return found_parts
 
 
-from rdflib import Graph
-import re  # Import the regular expressions module
+def flag_hazards(text):
+    warning_words = ["dangerous", "danger", "hazardous", "careful", "carefully"]
+    
+    pattern = re.compile(r'\b(?:' + '|'.join(warning_words) + r')\b', re.IGNORECASE)
 
-def parse_rdf(file_path):
-    graph = Graph()
-    graph.parse(file_path, format='xml')
+    return bool(pattern.search(text))
 
-    data = {}
 
-    # Define prefixes to remove
-    prefixes_to_remove = [
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "http://cits3005.org/pc-ontology.owl#"
-    ]
+def clean_string(input_string):
+    # Replace spaces with underscores and encode special characters
+    cleaned_string = input_string.replace(" ", "_").replace("-", "_")
+    return urllib.parse.quote(cleaned_string)  # URL encode special characters
 
-    for subj, pred, obj in graph:
-        # Remove prefixes from subject, predicate, and object
-        clean_subj = remove_prefixes(str(subj), prefixes_to_remove)
-        clean_pred = remove_prefixes(str(pred), prefixes_to_remove)
-        clean_obj = remove_prefixes(str(obj), prefixes_to_remove)
 
-        # Ignore nodes with names like Ne8593166ee71465492
-        if ignore_node(clean_subj):
-            continue  # Skip this iteration
+def get_or_create(cls, name):
+    cleaned_name = clean_string(name)  # Generate a URI-friendly name
+    instance = cls(cleaned_name)  # Use the cleaned name to create instance
+    if not instance in cls.instances():
+        instance.label = clean_string(name)  # Set human-readable label
+        return instance
+    return cls(cleaned_name)
 
-        if clean_subj not in data:
-            data[clean_subj] = []
-        data[clean_subj].append((clean_pred, clean_obj))
 
-    return data
+def create_class(cls, name):
+    name = clean_string(name)
+    cls = getattr(onto, clean_string(cls), None)
+    if cls:
+        instance = cls(name)
+        if not instance in cls.instances():
+            instance.label = name
+            return instance
+        return cls(name)
+    else:
+        # Handle the case where the class does not exist
+        print(f"Class {cls} does not exist.")
+        return None
 
-def remove_prefixes(value, prefixes):
-    """ Remove specified prefixes from the value. """
-    for prefix in prefixes:
-        if value.startswith(prefix):
-            return value[len(prefix):]  # Return the string without the prefix
-    return value  # Return the original value if no prefix is found
 
-def ignore_node(node_name):
-    """ Return True if the node name should be ignored. """
-    # Check if the node name matches the pattern
-    return bool(re.match(r'^Ne\d{10,}.*$', node_name))  # Adjust the regex as needed
+search_list = ['battery', 'cover', 'screen']
 
+data = selection("app\data\PC.json", 5)
+# Create instances and relationships
+for item in data:
+    # Create Item instance
+    item_instance = create_class(item['Category'], f"{item['Category']}_instance")
+    
+    # Create Procedure instance
+    procedure_instance = get_or_create(onto.Procedure, f"{item['Title']}_Procedure")
+    procedure_instance.isForItem.append(item_instance)
+    
+    # Create Toolbox instance
+    toolbox_instance = get_or_create(onto.Toolbox, f"{item['Title']}_Toolbox")
+    toolbox_instance.isForProcedure.append(procedure_instance)
+
+    part_instance = get_or_create(onto.Part, item['Subject'])
+    part_instance.isPartOf.append(item_instance)
+    
+    # Create Tool instances
+    for tool in item['Toolbox']:
+        tool_instance = get_or_create(onto.Tool, tool['Name'])
+        toolbox_instance.containsTool.append(tool_instance)
+    
+    # Create Step instances
+    for step in item['Steps']:
+        step_instance = get_or_create(onto.Step, f"Step_{step['StepId']}")
+        step_instance.isPartOfProcedure.append(procedure_instance)
+        
+        text_instance = get_or_create(onto.Text, f"Text_{step['StepId']}")
+        text_instance.label = step['Text_raw']
+        step_instance.hasText.append(text_instance)
+
+        for part in extract_parts(step['Text_raw'], search_list):
+            part_instance = get_or_create(onto.Part, part)
+            part_instance.isPartOf.append(item_instance)
+
+        if flag_hazards(step['Text_raw']):
+            hazard_instance = get_or_create(onto.Hazard, f"Hazard_{step['StepId']}")
+            step_instance.hasHazard.append(hazard_instance)
+        
+        # Create Image instances
+        for image_url in step['Images']:
+            image_instance = get_or_create(onto.Image, image_url)
+            step_instance.hasImage.append(image_instance)
+        
+        # Link Tools to Steps
+        for tool_name in step['Tools_extracted']:
+            if tool_name != "NA":
+                tool_instance = get_or_create(onto.Tool, tool_name)
+                step_instance.usesTool.append(tool_instance)
+    
+    # Create Item hierarchy
+    for ancestor in item['Ancestors']:
+        ancestor_instance = get_or_create(onto.Item, ancestor)
+        item_instance.isPartOf.append(ancestor_instance)
+
+
+# Compute sub-procedure relations
+for p1 in onto.Procedure.instances():
+    for p2 in onto.Procedure.instances():
+        if p1 != p2:
+            steps_p1 = set(p1.hasStep)
+            steps_p2 = set(p2.hasStep)
+            if steps_p2 < steps_p1:
+                p2.is_a.append(onto.Sub_Procedure)
+
+
+# Run the reasoner
+# sync_reasoner()
+
+# Save the ontology
+onto.save(file="app\data\ifix-it-kg.owl", format="rdfxml")

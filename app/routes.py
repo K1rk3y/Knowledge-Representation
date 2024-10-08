@@ -22,7 +22,7 @@ def index():
     
     # Load the RDF/XML file
     g = Graph()
-    g.parse("app/data/ifix-it-ontology.owl", format="xml")
+    g.parse("app/data/ifix-it-kg.owl", format="xml")
 
     prefixes = {
         '': 'http://cits3005.org/pc-ontology.owl#',  # Default namespace
