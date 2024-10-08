@@ -136,6 +136,7 @@ for p1 in onto.Procedure.instances():
             steps_p1 = set(p1.hasStep)
             steps_p2 = set(p2.hasStep)
             if steps_p2 < steps_p1:
+                # print(p1, p2)
                 p2.is_a.append(onto.Sub_Procedure)
 
 
