@@ -1,5 +1,9 @@
 from owlready2 import *
 import json
+import os
+
+java_bin_path = "D:\ComputerCore\Java\bin"
+os.environ["JAVA_HOME"] = java_bin_path
 
 onto = get_ontology("app\data\ifix-it-ontology.owl").load()
 
@@ -141,7 +145,9 @@ for p1 in onto.Procedure.instances():
 
 
 # Run the reasoner
-# sync_reasoner()
+with onto:
+    sync_reasoner(infer_property_values=True)
+    print(list(default_world.inconsistent_classes()))
 
 # Save the ontology
 onto.save(file="app\data\ifix-it-kg.owl", format="rdfxml")

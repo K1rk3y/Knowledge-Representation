@@ -261,8 +261,5 @@ with onto:
     """)
 
 
-# Run the reasoner
-# sync_reasoner()
-
 # Save the ontology
 onto.save(file="app\data\ifix-it-ontology.owl", format="rdfxml")
