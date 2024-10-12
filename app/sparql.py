@@ -84,3 +84,26 @@ SELECT ?procedure ?tool WHERE {
 qres = g.query(query)
 for row in qres:
     print(row)
+
+
+# Flag Potential Hazards in Procedures
+query = """
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX onto: <http://cits3005.org/pc-ontology.owl#>
+
+SELECT ?step ?text
+WHERE {
+    ?step rdf:type onto:Step.
+    ?step onto:hasText ?textNode.
+    ?textNode rdfs:label ?text .
+    FILTER(CONTAINS(LCASE(?text), "careful") ||
+        CONTAINS(LCASE(?text), "dangerous"))
+}
+GROUP BY ?step
+"""
+
+qres = g.query(query)
+for row in qres:
+    print(row)
