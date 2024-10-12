@@ -1,0 +1,26 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <http://cits3005.org/pc-ontology.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+########### Constraint: Tools in the toolbox must be used in procedure steps ###########
+
+ex:ToolUsageShape
+  a sh:NodeShape ;
+  sh:targetClass ex:Procedure ;
+  sh:sparql [
+    sh:prefixes (
+      ( "ex:" <http://cits3005.org/pc-ontology.owl#> )
+    ) ;
+    sh:message "Tool in the toolbox is not used in any step of the procedure." ;
+    sh:select """
+      SELECT $this ?toolbox ?tool
+      WHERE {
+        $this ex:hasStep ?step .
+        $this ex:isForProcedure ?toolbox .
+        ?toolbox ex:containsTool ?tool .
+        FILTER NOT EXISTS {
+          ?step ex:usesTool ?tool .
+        }
+      }
+    """ ;
+  ] .

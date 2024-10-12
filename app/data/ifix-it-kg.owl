@@ -599,18 +599,20 @@
   <rdf:type rdf:resource="#Part"/>
   <isPartOf rdf:resource="#Dell_Latitude_D620_instance"/>
   <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#Dell_Laptop"/>
   <isPartOf rdf:resource="#PC"/>
   <isPartOf rdf:resource="#Root"/>
   <isPartOf rdf:resource="#Dell_Latitude"/>
-  <isPartOf rdf:resource="#Dell_Laptop"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#ph00_phillips_screwdriver">
   <rdf:type rdf:resource="#Tool"/>
+  <isInToolbox rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#spudger">
   <rdf:type rdf:resource="#Tool"/>
+  <isInToolbox rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Step_11786">
@@ -633,10 +635,10 @@
   <isPartOf rdf:resource="#Sony_Laptop"/>
   <isPartOf rdf:resource="#Gateway_Laptop"/>
   <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#Dell_Laptop"/>
   <isPartOf rdf:resource="#PC"/>
   <isPartOf rdf:resource="#Root"/>
   <isPartOf rdf:resource="#Dell_Latitude"/>
-  <isPartOf rdf:resource="#Dell_Laptop"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#cover">
@@ -647,10 +649,10 @@
   <isPartOf rdf:resource="#Sony_Laptop"/>
   <isPartOf rdf:resource="#Gateway_Laptop"/>
   <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#Dell_Laptop"/>
   <isPartOf rdf:resource="#PC"/>
   <isPartOf rdf:resource="#Root"/>
   <isPartOf rdf:resource="#Dell_Latitude"/>
-  <isPartOf rdf:resource="#Dell_Laptop"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/2ahoN1SZaDunCRlW.standard">
@@ -724,10 +726,10 @@
   <isPartOf rdf:resource="#Gateway_SA1_instance"/>
   <isPartOf rdf:resource="#Gateway_Laptop"/>
   <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#Dell_Laptop"/>
   <isPartOf rdf:resource="#PC"/>
   <isPartOf rdf:resource="#Root"/>
   <isPartOf rdf:resource="#Dell_Latitude"/>
-  <isPartOf rdf:resource="#Dell_Laptop"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QA5Oqh3xJYJcYJAc.standard">
@@ -833,26 +835,26 @@
 <owl:NamedIndividual rdf:about="#Dell_Latitude">
   <rdf:type rdf:resource="#Item"/>
   <hasPart rdf:resource="#screen"/>
-  <hasPart rdf:resource="#cover"/>
   <hasPart rdf:resource="#CD_Drive"/>
+  <hasPart rdf:resource="#cover"/>
   <hasPart rdf:resource="#battery"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Dell_Laptop">
   <rdf:type rdf:resource="#Item"/>
   <hasPart rdf:resource="#screen"/>
-  <hasPart rdf:resource="#cover"/>
   <hasPart rdf:resource="#CD_Drive"/>
+  <hasPart rdf:resource="#cover"/>
   <hasPart rdf:resource="#battery"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#PC_Laptop">
   <rdf:type rdf:resource="#Item"/>
   <hasPart rdf:resource="#screen"/>
-  <hasPart rdf:resource="#cover"/>
-  <hasPart rdf:resource="#Screen"/>
-  <hasPart rdf:resource="#Keyboard"/>
   <hasPart rdf:resource="#CD_Drive"/>
+  <hasPart rdf:resource="#cover"/>
+  <hasPart rdf:resource="#Keyboard"/>
+  <hasPart rdf:resource="#Screen"/>
   <hasPart rdf:resource="#Upper_Casing"/>
   <hasPart rdf:resource="#Logic_Board"/>
   <hasPart rdf:resource="#battery"/>
@@ -861,22 +863,22 @@
 <owl:NamedIndividual rdf:about="#PC">
   <rdf:type rdf:resource="#Item"/>
   <hasPart rdf:resource="#screen"/>
-  <hasPart rdf:resource="#cover"/>
-  <hasPart rdf:resource="#Screen"/>
   <hasPart rdf:resource="#CD_Drive"/>
+  <hasPart rdf:resource="#cover"/>
   <hasPart rdf:resource="#Keyboard"/>
+  <hasPart rdf:resource="#Screen"/>
   <hasPart rdf:resource="#Upper_Casing"/>
-  <hasPart rdf:resource="#battery"/>
   <hasPart rdf:resource="#Logic_Board"/>
+  <hasPart rdf:resource="#battery"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Root">
   <rdf:type rdf:resource="#Item"/>
   <hasPart rdf:resource="#screen"/>
-  <hasPart rdf:resource="#cover"/>
-  <hasPart rdf:resource="#Screen"/>
-  <hasPart rdf:resource="#Keyboard"/>
   <hasPart rdf:resource="#CD_Drive"/>
+  <hasPart rdf:resource="#cover"/>
+  <hasPart rdf:resource="#Keyboard"/>
+  <hasPart rdf:resource="#Screen"/>
   <hasPart rdf:resource="#Upper_Casing"/>
   <hasPart rdf:resource="#Logic_Board"/>
   <hasPart rdf:resource="#battery"/>
@@ -1164,8 +1166,8 @@
   <hasPart rdf:resource="#cover"/>
   <hasPart rdf:resource="#Keyboard"/>
   <hasPart rdf:resource="#Upper_Casing"/>
-  <hasPart rdf:resource="#battery"/>
   <hasPart rdf:resource="#Logic_Board"/>
+  <hasPart rdf:resource="#battery"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure">
@@ -1200,9 +1202,9 @@
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox">
   <rdf:type rdf:resource="#Toolbox"/>
   <isForProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
-  <containsTool rdf:resource="#5mm_nut_driver"/>
   <containsTool rdf:resource="#ph00_phillips_screwdriver"/>
   <containsTool rdf:resource="#spudger"/>
+  <containsTool rdf:resource="#5mm_nut_driver"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Logic_Board">
@@ -1212,10 +1214,6 @@
   <isPartOf rdf:resource="#PC_Laptop"/>
   <isPartOf rdf:resource="#PC"/>
   <isPartOf rdf:resource="#Root"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#5mm_nut_driver">
-  <rdf:type rdf:resource="#Tool"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Step_11436">
@@ -1524,6 +1522,11 @@
 
 <owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/H6NRlyZkgXMEJhAH.standard">
   <rdf:type rdf:resource="#Image"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#5mm_nut_driver">
+  <rdf:type rdf:resource="#Tool"/>
+  <isInToolbox rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Step_11449">

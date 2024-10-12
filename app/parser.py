@@ -1,6 +1,8 @@
 from owlready2 import *
 import json
 import os
+from rdflib import Graph, Namespace
+from pyshacl import validate
 
 java_bin_path = "D:\ComputerCore\Java\bin"
 os.environ["JAVA_HOME"] = java_bin_path
@@ -77,7 +79,7 @@ def create_class(cls, name):
 
 search_list = ['battery', 'cover', 'screen']
 
-data = selection("app\data\PC.json", 5)
+data = selection("app\data\TEST.json", 5)
 # Create instances and relationships
 for item in data:
     # Create Item instance
@@ -144,10 +146,59 @@ for p1 in onto.Procedure.instances():
                 p2.is_a.append(onto.Sub_Procedure)
 
 
+
+shacl_file = '''\
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <http://cits3005.org/pc-ontology.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:ToolUsageShape
+  a sh:NodeShape ;
+  sh:targetClass ex:Procedure ;
+  sh:property [
+    sh:path ex:hasStep ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path [sh:inversePath ex:isForProcedure] ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:sparql [
+    sh:prefixes ex: ;
+    sh:select """
+      PREFIX ex: <http://cits3005.org/pc-ontology.owl#>
+      SELECT $this ?step ?tool
+      WHERE {
+        $this ex:hasStep ?step .
+        ?step ex:usesTool ?tool .
+        FILTER NOT EXISTS {
+          ?toolbox ex:isForProcedure $this .
+          ?toolbox ex:containsTool ?tool .
+        }
+      }
+    """ ;
+    sh:message "Tools used in a step of this procedure did not appear in the toolbox of this procedure" ;
+  ] .
+'''
+
+
+
+def run_shacl_validation():
+    graph = onto.world.as_rdflib_graph()
+    shacl_graph = Graph().parse(data=shacl_file, format="turtle")
+    conforms, report, message = validate(graph, shacl_graph=shacl_graph, advanced=True)
+
+    print(f"Validation conforms: {conforms}")
+    print(message)
+
+
+run_shacl_validation()
+
 # Run the reasoner
-with onto:
-    sync_reasoner(infer_property_values=True)
-    print(list(default_world.inconsistent_classes()))
+#with onto:
+    #sync_reasoner(infer_property_values=True)
+    #print(list(default_world.inconsistent_classes()))
 
 # Save the ontology
-onto.save(file="app\data\ifix-it-kg.owl", format="rdfxml")
+#onto.save(file="app\data\ifix-it-kg.owl", format="rdfxml")
