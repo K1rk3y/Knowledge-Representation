@@ -19,77 +19,101 @@ def index():
     global blank_node_labels, next_blank_node_id
     blank_node_labels = {}
     next_blank_node_id = 1
-    
+
     # Load the RDF/XML file
     g = Graph()
     g.parse("app/data/ifix-it-kg.owl", format="xml")
+
 
     prefixes = {
         '': 'http://cits3005.org/pc-ontology.owl#',  # Default namespace
     }
 
+    custom_query_prefixes = """
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX onto: <http://cits3005.org/pc-ontology.owl#>
+    """
+
     svg_content = None
     error_message = None
+    query_results = None
 
     if request.method == 'POST':
+        # Check if the user entered a custom SPARQL query
+        custom_query = request.form.get('custom_sparql', '').strip()
+
         try:
-            # Get lists of form data
-            subjects = request.form.getlist('subject[]')
-            predicates = request.form.getlist('predicate[]')
-            objects = request.form.getlist('object[]')
+            if custom_query:
 
-            # Initialize variables set and triples list
-            variables = set()
-            triple_patterns = []
+                # Prepend the defined prefixes to the user's query for custom queries
+                full_query = custom_query_prefixes + custom_query
 
-            # Process each triple pattern
-            for s, p, o in zip(subjects, predicates, objects):
-                # Strip whitespace
-                s = s.strip()
-                p = p.strip()
-                o = o.strip()
-            
-                # If fields are empty, replace with variables
-                s = f"?s" if not s else expand_term(s, prefixes)
-                p = f"?p" if not p else expand_term(p, prefixes)
-                o = f"?o" if not o else expand_term(o, prefixes)
-            
-                # Collect variables for SELECT clause
-                for term in [s, p, o]:
-                    if term.startswith('?'):
-                        variables.add(term)
-            
-                triple_patterns.append(f"{s} {p} {o} .")
+                # Execute the query with default namespace (initNs)
+                results = g.query(full_query, initNs=prefixes)
 
-            # Construct SPARQL query
-            where_clause = '\n    '.join(triple_patterns)
-            select_clause = ' '.join(variables) if variables else '*'
-            query = f"""
-                SELECT {select_clause}
-                WHERE {{
-                    {where_clause}
-                }}
-            """
+                # Format the results for display (text-based or table-based)
+                query_results = format_results(results)
 
-            # Execute query
-            results = g.query(query)
-
-            # Convert results to triples
-            triples = []
-            for row in results:
-                binding = {str(var): str(val) for var, val in row.asdict().items()}
-                
-                for s, p, o in zip(subjects, predicates, objects):
-                    s_val = binding.get(s.strip('?'), s) if s.startswith('?') else s
-                    p_val = binding.get(p.strip('?'), p) if p.startswith('?') else p
-                    o_val = binding.get(o.strip('?'), o) if o.startswith('?') else o
-                    triples.append((s_val, p_val, o_val))
-
-            if not triples:
-                error_message = "No results found for this query."
             else:
-                # Generate SVG from query results
-                svg_content = generate_svg(triples)
+                # Handle triple pattern query if no custom SPARQL provided
+                subjects = request.form.getlist('subject[]')
+                predicates = request.form.getlist('predicate[]')
+                objects = request.form.getlist('object[]')
+
+                # Initialize variables set and triple patterns list
+                variables = set()
+                triple_patterns = []
+
+                # Process each triple pattern
+                for s, p, o in zip(subjects, predicates, objects):
+                    # Strip whitespace
+                    s = s.strip()
+                    p = p.strip()
+                    o = o.strip()
+
+                    # If fields are empty, replace with variables
+                    s = f"?s" if not s else expand_term(s, prefixes)
+                    p = f"?p" if not p else expand_term(p, prefixes)
+                    o = f"?o" if not o else expand_term(o, prefixes)
+
+                    # Collect variables for SELECT clause
+                    for term in [s, p, o]:
+                        if term.startswith('?'):
+                            variables.add(term)
+
+                    triple_patterns.append(f"{s} {p} {o} .")
+
+                # Construct SPARQL query
+                where_clause = '\n    '.join(triple_patterns)
+                select_clause = ' '.join(variables) if variables else '*'
+                query = f"""
+                    SELECT {select_clause}
+                    WHERE {{
+                        {where_clause}
+                    }}
+                """
+
+                # Execute triple pattern query
+                results = g.query(query)
+
+                # Convert results to triples
+                triples = []
+                for row in results:
+                    binding = {str(var): str(val) for var, val in row.asdict().items()}
+
+                    for s, p, o in zip(subjects, predicates, objects):
+                        s_val = binding.get(s.strip('?'), s) if s.startswith('?') else s
+                        p_val = binding.get(p.strip('?'), p) if p.startswith('?') else p
+                        o_val = binding.get(o.strip('?'), o) if o.startswith('?') else o
+                        triples.append((s_val, p_val, o_val))
+
+                if not triples:
+                    error_message = "No results found for this query."
+                else:
+                    # Generate SVG from query results
+                    svg_content = generate_svg(triples)
 
         except Exception as e:
             error_message = f"Error executing query: {str(e)}"
@@ -98,9 +122,23 @@ def index():
     if svg_content is None and not error_message:
         svg_content = '<svg width="800" height="100"><text x="400" y="50" text-anchor="middle">Enter a query to visualize the results</text></svg>'
 
-    return render_template('index.html', 
-                         svg_content=svg_content,
-                         error_message=error_message)
+    return render_template('index.html',
+                           svg_content=svg_content,
+                           query_results=query_results,
+                           error_message=error_message)
+
+def format_results(results):
+    formatted_results = []
+
+    # Iterate over each result row
+    for row in results:
+        result_row = {}
+        for var, val in row.asdict().items():
+            result_row[str(var)] = str(val)
+        formatted_results.append(result_row)
+
+    return formatted_results
+
 
 def expand_term(term, prefixes):
     if term.startswith('?'):

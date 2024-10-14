@@ -181,6 +181,10 @@
         
          <div class="query-form">
             <form method="POST">
+                <!-- Add custom SPARQL query textarea -->
+                <textarea name="custom_sparql" placeholder="Enter SPARQL query here..." style="width: 100%; height: 100px;"></textarea>
+                <br>
+                <input type="submit" value="Run Query">
                 <div id="triple-patterns-container">
                     <div class="triple-pattern">
                         <span class="static-text">Find all</span>
@@ -215,6 +219,30 @@
         <div id="svg-container">
             {{ svg_content | safe }}
         </div>
+
+        {% if query_results %}
+        <div class="results">
+            <h2>Query Results</h2>
+            <table border="1" cellpadding="5" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        {% for key in query_results[0].keys() %}
+                            <th>{{ key }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in query_results %}
+                    <tr>
+                        {% for value in row.values() %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
 
         <div class="zoom-controls">
             <button onclick="zoomIn()">+</button>
