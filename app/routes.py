@@ -6,6 +6,10 @@ import re
 from collections import defaultdict
 import json
 import base64 
+from rdflib import URIRef, Literal, RDF, Namespace
+from rdflib.namespace import RDFS
+from flask import redirect
+
 
 main = Blueprint('main', __name__)
 
@@ -216,6 +220,123 @@ def get_readable_label(uri):
     except Exception as e:
         # If there's any error parsing, return the original URI
         return str(uri)
+    
+@main.route('/add_data', methods=['GET', 'POST'])
+def add_data():
+    if request.method == 'POST':
+        # Retrieve form data
+        title = request.form['title']
+        guidid = request.form['guidid']
+        category = request.form['category']
+        url = request.form['url']
+        ancestors = request.form.getlist('ancestors[]')
+        tool_names = request.form.getlist('tool_name[]')
+        tool_urls = request.form.getlist('tool_url[]')
+        tool_thumbnails = request.form.getlist('tool_thumbnail[]')
+        step_orders = request.form.getlist('step_order[]')
+        step_text_raw = request.form.getlist('step_text_raw[]')
+        step_images = request.form.getlist('step_images[]')
+        step_ids = request.form.getlist('step_id[]')
+        tools_extracted = request.form.getlist('tools_extracted[]')
+
+        # Construct steps
+        steps = []
+        for i in range(len(step_orders)):
+            lines = request.form.getlist(f'step_line_text_{i}[]')
+            step = {
+                "Order": int(step_orders[i]),
+                "Lines": [{"Text": line} for line in lines],
+                "Text_raw": step_text_raw[i],
+                "Images": step_images[i].split(','),  # Split comma-separated URLs
+                "StepId": int(step_ids[i]),
+                "Tools_extracted": tools_extracted[i].split(',')  # Split comma-separated tools
+            }
+            steps.append(step)
+
+        # Construct toolbox
+        toolbox = [{"Name": tool_names[i], "Url": tool_urls[i], "Thumbnail": tool_thumbnails[i]} for i in range(len(tool_names))]
+
+        # Construct JSON structure
+        data = {
+            "Title": title,
+            "Guidid": int(guidid),
+            "Category": category,
+            "Url": url,
+            "Ancestors": ancestors,
+            "Toolbox": toolbox,
+            "Steps": steps
+        }
+
+        # Load the RDF graph
+        g = Graph()
+        g.parse("app/data/ifix-it-kg.owl", format="xml")
+        onto = Namespace("http://cits3005.org/pc-ontology.owl#")
+
+        # Create a URI for the procedure
+        procedure_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#{title.replace(' ', '_')}")
+        g.add((procedure_uri, RDF.type, onto.Procedure))
+        g.add((procedure_uri, onto.guidid, Literal(guidid)))
+        g.add((procedure_uri, onto.category, Literal(category)))
+        g.add((procedure_uri, onto.url, Literal(url)))
+
+        # Handle ancestors (these are related to the item, not the procedure)
+        item_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#{category.replace(' ', '_')}")
+        for ancestor in ancestors:
+            ancestor_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#{ancestor.replace(' ', '_')}")
+            g.add((item_uri, onto.isPartOf, ancestor_uri))
+
+        # Handle toolbox
+        toolbox_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#{title.replace(' ', '_')}_Toolbox")
+        g.add((toolbox_uri, RDF.type, onto.Toolbox))
+        g.add((toolbox_uri, onto.isForProcedure, procedure_uri))
+
+        for i in range(len(tool_names)):
+            tool_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#{tool_names[i].replace(' ', '_')}")
+            g.add((tool_uri, RDF.type, onto.Tool))
+            g.add((tool_uri, onto.toolName, Literal(tool_names[i])))
+            g.add((tool_uri, onto.toolUrl, Literal(tool_urls[i])))
+            g.add((tool_uri, onto.toolThumbnail, Literal(tool_thumbnails[i])))
+            g.add((toolbox_uri, onto.containsTool, tool_uri))
+
+        # Handle steps
+        for i, step in enumerate(steps):
+            step_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#Step_{step['StepId']}")
+            g.add((step_uri, RDF.type, onto.Step))
+            g.add((step_uri, onto.stepOrder, Literal(step['Order'])))
+            g.add((step_uri, onto.isPartOfProcedure, procedure_uri))
+
+            # Add raw text
+            text_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#Text_{step['StepId']}")
+            g.add((text_uri, RDF.type, onto.Text))
+            g.add((text_uri, RDFS.label, Literal(step['Text_raw'])))
+            g.add((step_uri, onto.hasText, text_uri))
+
+            # Add images
+            for img_url in step['Images']:
+                img_uri = URIRef(img_url)
+                g.add((img_uri, RDF.type, onto.Image))
+                g.add((step_uri, onto.hasImage, img_uri))
+
+            # Add tools extracted
+            for tool_name in step['Tools_extracted']:
+                if tool_name != "NA":
+                    tool_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#{tool_name.replace(' ', '_')}")
+                    g.add((step_uri, onto.usesTool, tool_uri))
+
+            # Add lines
+            for line in step['Lines']:
+                line_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#Line_{step['StepId']}_{i}")
+                g.add((line_uri, RDF.type, onto.Line))
+                g.add((line_uri, RDFS.label, Literal(line['Text'])))
+                g.add((step_uri, onto.hasLine, line_uri))
+
+        # Save the updated graph
+        g.serialize("app/data/ifix-it-kg.owl", format="xml")
+
+        return redirect('/')
+    
+    return render_template('add_data.html')
+
 
 def generate_svg(triples):
     import math

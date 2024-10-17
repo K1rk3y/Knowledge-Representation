@@ -4,10 +4,10 @@ import os
 from rdflib import Graph, Namespace
 from pyshacl import validate
 
-java_bin_path = "D:\ComputerCore\Java\bin"
+java_bin_path = r"D:\ComputerCore\Java\bin"
 os.environ["JAVA_HOME"] = java_bin_path
 
-onto = get_ontology("app\data\ifix-it-ontology.owl").load()
+onto = get_ontology(r"app\data\ifix-it-ontology.owl").load()
 
 
 def selection(file_path, num):
@@ -79,7 +79,9 @@ def create_class(cls, name):
 
 search_list = ['battery', 'cover', 'screen']
 
+
 data = selection("app\data\PC.json", 5)
+
 # Create instances and relationships
 for item in data:
     # Create Item instance

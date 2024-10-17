@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Procedure</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dynamic-input-group {
+            margin-bottom: 15px;
+        }
+
+        .sub-label {
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Procedure</h1>
+        <form action="/add_data" method="POST">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter procedure title" required>
+
+            <label for="guidid">Guidid</label>
+            <input type="text" id="guidid" name="guidid" placeholder="Enter Guidid" required>
+
+            <label for="category">Category</label>
+            <input type="text" id="category" name="category" placeholder="Enter category" required>
+
+            <label for="url">URL</label>
+            <input type="text" id="url" name="url" placeholder="Enter URL" required>
+
+            <label>Ancestors</label>
+            <div id="ancestors-container">
+                <div class="dynamic-input-group">
+                    <input type="text" name="ancestors[]" placeholder="Enter ancestor" required>
+                </div>
+            </div>
+            <button type="button" onclick="addAncestor()">Add More Ancestors</button>
+
+            <label>Toolbox</label>
+            <div id="toolbox-container">
+                <div class="dynamic-input-group">
+                    <input type="text" name="tool_name[]" placeholder="Tool Name" required>
+                    <input type="text" name="tool_url[]" placeholder="Tool URL" required>
+                    <input type="text" name="tool_thumbnail[]" placeholder="Tool Thumbnail URL" required>
+                </div>
+            </div>
+            <button type="button" onclick="addTool()">Add More Tools</button>
+
+            <label>Steps</label>
+            <div id="steps-container">
+                <div class="dynamic-input-group">
+                    <label class="sub-label">Order</label>
+                    <input type="text" name="step_order[]" placeholder="Step Order" required>
+
+                    <label class="sub-label">Lines (Text)</label>
+                    <div id="step-lines-container-0">
+                        <input type="text" name="step_line_text_0[]" placeholder="Enter line text">
+                    </div>
+                    <button type="button" onclick="addStepLine(0)">Add Line</button>
+
+                    <label class="sub-label">Text Raw</label>
+                    <textarea name="step_text_raw[]" placeholder="Enter raw step text"></textarea>
+
+                    <label class="sub-label">Images (Comma Separated URLs)</label>
+                    <input type="text" name="step_images[]" placeholder="Enter image URLs, separated by commas">
+
+                    <label class="sub-label">Step ID</label>
+                    <input type="text" name="step_id[]" placeholder="Step ID">
+
+                    <label class="sub-label">Tools Extracted (Comma Separated)</label>
+                    <input type="text" name="tools_extracted[]" placeholder="Enter tools extracted, separated by commas">
+                </div>
+            </div>
+            <button type="button" onclick="addStep()">Add More Steps</button>
+
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    </div>
+
+    <script>
+        let stepCount = 1; // To track the step order dynamically
+
+        function addAncestor() {
+            let container = document.getElementById('ancestors-container');
+            let inputGroup = document.createElement('div');
+            inputGroup.classList.add('dynamic-input-group');
+            inputGroup.innerHTML = '<input type="text" name="ancestors[]" placeholder="Enter ancestor">';
+            container.appendChild(inputGroup);
+        }
+
+        function addTool() {
+            let container = document.getElementById('toolbox-container');
+            let inputGroup = document.createElement('div');
+            inputGroup.classList.add('dynamic-input-group');
+            inputGroup.innerHTML = '<input type="text" name="tool_name[]" placeholder="Tool Name"><input type="text" name="tool_url[]" placeholder="Tool URL"><input type="text" name="tool_thumbnail[]" placeholder="Tool Thumbnail URL">';
+            container.appendChild(inputGroup);
+        }
+
+        function addStep() {
+            let container = document.getElementById('steps-container');
+            let inputGroup = document.createElement('div');
+            inputGroup.classList.add('dynamic-input-group');
+            inputGroup.innerHTML = `
+                <label class="sub-label">Order</label>
+                <input type="text" name="step_order[]" placeholder="Step Order" required>
+
+                <label class="sub-label">Lines (Text)</label>
+                <div id="step-lines-container-${stepCount}">
+                    <input type="text" name="step_line_text_${stepCount}[]" placeholder="Enter line text">
+                </div>
+                <button type="button" onclick="addStepLine(${stepCount})">Add Line</button>
+
+                <label class="sub-label">Text Raw</label>
+                <textarea name="step_text_raw[]" placeholder="Enter raw step text"></textarea>
+
+                <label class="sub-label">Images (Comma Separated URLs)</label>
+                <input type="text" name="step_images[]" placeholder="Enter image URLs, separated by commas">
+
+                <label class="sub-label">Step ID</label>
+                <input type="text" name="step_id[]" placeholder="Step ID">
+
+                <label class="sub-label">Tools Extracted (Comma Separated)</label>
+                <input type="text" name="tools_extracted[]" placeholder="Enter tools extracted, separated by commas">
+            `;
+            container.appendChild(inputGroup);
+            stepCount++;
+        }
+
+        function addStepLine(stepIndex) {
+            let container = document.getElementById(`step-lines-container-${stepIndex}`);
+            let inputGroup = document.createElement('div');
+            inputGroup.classList.add('dynamic-input-group');
+            inputGroup.innerHTML = '<input type="text" name="step_line_text_' + stepIndex + '[]" placeholder="Enter line text">';
+            container.appendChild(inputGroup);
+        }
+    </script>
+</body>
+</html>
