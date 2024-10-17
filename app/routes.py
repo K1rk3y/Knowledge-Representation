@@ -337,6 +337,55 @@ def add_data():
     
     return render_template('add_data.html')
 
+@main.route('/delete_data', methods=['GET', 'POST'])
+def delete_data():
+    if request.method == 'POST':
+        # Retrieve form data (node to delete)
+        title = request.form['title']
+
+        # Load the RDF graph
+        g = Graph()
+        g.parse("app/data/ifix-it-kg.owl", format="xml")
+        onto = Namespace("http://cits3005.org/pc-ontology.owl#")
+
+        # Create the URI for the node based on the title
+        node_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#{title.replace(' ', '_')}")
+
+        # Check if the node exists in the graph
+        outgoing_triples = list(g.triples((node_uri, None, None)))  # Outgoing relationships
+        incoming_triples = list(g.triples((None, None, node_uri)))  # Incoming relationships
+
+        if outgoing_triples or incoming_triples:
+            # Display the relationships to the user and ask for confirmation
+            if 'confirm_delete' in request.form:
+                # If user has confirmed deletion, proceed with deleting the node and its relationships
+                g.remove((node_uri, None, None))
+                g.remove((None, None, node_uri))
+
+                # Save the updated graph
+                g.serialize("app/data/ifix-it-kg.owl", format="xml")
+
+                return redirect('/')
+
+            else:
+                # Display a warning about the relationships that will be affected
+                outgoing_list = [(str(p), str(o)) for _, p, o in outgoing_triples]
+                incoming_list = [(str(s), str(p)) for s, p, _ in incoming_triples]
+                
+                return render_template('delete_data.html', 
+                                       outgoing_list=outgoing_list, 
+                                       incoming_list=incoming_list, 
+                                       title=title)
+
+        else:
+            # No relationships found, show error message
+            error_message = f"Node with title '{title}' not found."
+            return render_template('delete_data.html', error_message=error_message)
+
+    return render_template('delete_data.html')
+
+
+
 
 def generate_svg(triples):
     import math
