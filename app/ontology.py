@@ -240,26 +240,6 @@ with onto:
         containsTool(?tb, ?t)
     """)
 
-    # Sub-Procedure Consistency Rule (Same Item)
-    rule = Imp()
-    rule.set_as_rule("""
-        Sub_Procedure(?p2), Procedure(?p1), Item(?i),
-        hasSubProcedure(?p1, ?p2), isForItem(?p1, ?i), isForItem(?p2, ?i), 
-        DifferentFrom(?p1, ?p2)
-        ->
-        DifferentFrom(?p1, ?p2)
-    """)
-
-    # Sub-Procedure Consistency Rule (Part Item)
-    rule = Imp()
-    rule.set_as_rule("""
-        Sub_Procedure(?p2), Procedure(?p1), Item(?i1), Item(?i2),
-        hasSubProcedure(?p1, ?p2), isForItem(?p1, ?i1), isForItem(?p2, ?i2), 
-        DifferentFrom(?i1, ?i2)
-        ->
-        hasPart(?i1, ?i2)
-    """)
-
 
 # Save the ontology
 onto.save(file="app\data\ifix-it-ontology.owl", format="rdfxml")

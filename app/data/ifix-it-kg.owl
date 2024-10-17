@@ -579,11 +579,13 @@
   <isPartOf rdf:resource="#PC_Laptop"/>
   <isPartOf rdf:resource="#PC"/>
   <isPartOf rdf:resource="#Root"/>
+  <rdf:type rdf:resource="#Part"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Dell_Latitude_D620_CD_Drive_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
   <isForItem rdf:resource="#Dell_Latitude_D620_instance"/>
+  <rdf:type rdf:resource="#Dell_Latitude_D620_repair_procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Dell_Latitude_D620_CD_Drive_Replacement_Toolbox">
@@ -596,14 +598,21 @@
 <owl:NamedIndividual rdf:about="#CD_Drive">
   <rdf:type rdf:resource="#Part"/>
   <isPartOf rdf:resource="#Dell_Latitude_D620_instance"/>
+  <isPartOf rdf:resource="#Dell_Laptop"/>
+  <isPartOf rdf:resource="#Dell_Latitude"/>
+  <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#PC"/>
+  <isPartOf rdf:resource="#Root"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#ph00_phillips_screwdriver">
   <rdf:type rdf:resource="#Tool"/>
+  <isInToolbox rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#spudger">
   <rdf:type rdf:resource="#Tool"/>
+  <isInToolbox rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Step_11786">
@@ -622,7 +631,17 @@
   <rdf:type rdf:resource="#Part"/>
   <isPartOf rdf:resource="#Dell_Latitude_D620_instance"/>
   <isPartOf rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
+  <isPartOf rdf:resource="#INTEL_Core_i9_instance"/>
   <isPartOf rdf:resource="#Gateway_SA1_instance"/>
+  <isPartOf rdf:resource="#Dell_Laptop"/>
+  <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#Sony_Laptop"/>
+  <isPartOf rdf:resource="#Gateway_Laptop"/>
+  <isPartOf rdf:resource="#PC"/>
+  <isPartOf rdf:resource="#Root"/>
+  <isPartOf rdf:resource="#Dell_Latitude"/>
+  <isPartOf rdf:resource="#PC_CPU"/>
+  <isPartOf rdf:resource="#Intel_CPU"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#cover">
@@ -630,6 +649,13 @@
   <isPartOf rdf:resource="#Dell_Latitude_D620_instance"/>
   <isPartOf rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
   <isPartOf rdf:resource="#Gateway_SA1_instance"/>
+  <isPartOf rdf:resource="#Dell_Laptop"/>
+  <isPartOf rdf:resource="#Dell_Latitude"/>
+  <isPartOf rdf:resource="#Sony_Laptop"/>
+  <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#Gateway_Laptop"/>
+  <isPartOf rdf:resource="#PC"/>
+  <isPartOf rdf:resource="#Root"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/2ahoN1SZaDunCRlW.standard">
@@ -701,6 +727,12 @@
   <rdf:type rdf:resource="#Part"/>
   <isPartOf rdf:resource="#Dell_Latitude_D620_instance"/>
   <isPartOf rdf:resource="#Gateway_SA1_instance"/>
+  <isPartOf rdf:resource="#Dell_Laptop"/>
+  <isPartOf rdf:resource="#Dell_Latitude"/>
+  <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#Gateway_Laptop"/>
+  <isPartOf rdf:resource="#Root"/>
+  <isPartOf rdf:resource="#PC"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QA5Oqh3xJYJcYJAc.standard">
@@ -805,22 +837,53 @@
 
 <owl:NamedIndividual rdf:about="#Dell_Latitude">
   <rdf:type rdf:resource="#Item"/>
+  <hasPart rdf:resource="#battery"/>
+  <hasPart rdf:resource="#CD_Drive"/>
+  <hasPart rdf:resource="#cover"/>
+  <hasPart rdf:resource="#screen"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Dell_Laptop">
   <rdf:type rdf:resource="#Item"/>
+  <hasPart rdf:resource="#battery"/>
+  <hasPart rdf:resource="#CD_Drive"/>
+  <hasPart rdf:resource="#cover"/>
+  <hasPart rdf:resource="#screen"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#PC_Laptop">
   <rdf:type rdf:resource="#Item"/>
+  <hasPart rdf:resource="#battery"/>
+  <hasPart rdf:resource="#CD_Drive"/>
+  <hasPart rdf:resource="#Screen"/>
+  <hasPart rdf:resource="#Logic_Board"/>
+  <hasPart rdf:resource="#Upper_Casing"/>
+  <hasPart rdf:resource="#cover"/>
+  <hasPart rdf:resource="#screen"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#PC">
   <rdf:type rdf:resource="#Item"/>
+  <hasPart rdf:resource="#battery"/>
+  <hasPart rdf:resource="#CD_Drive"/>
+  <hasPart rdf:resource="#Screen"/>
+  <hasPart rdf:resource="#Logic_Board"/>
+  <hasPart rdf:resource="#Keyboard"/>
+  <hasPart rdf:resource="#Upper_Casing"/>
+  <hasPart rdf:resource="#cover"/>
+  <hasPart rdf:resource="#screen"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Root">
   <rdf:type rdf:resource="#Item"/>
+  <hasPart rdf:resource="#battery"/>
+  <hasPart rdf:resource="#CD_Drive"/>
+  <hasPart rdf:resource="#Screen"/>
+  <hasPart rdf:resource="#Logic_Board"/>
+  <hasPart rdf:resource="#Keyboard"/>
+  <hasPart rdf:resource="#Upper_Casing"/>
+  <hasPart rdf:resource="#cover"/>
+  <hasPart rdf:resource="#screen"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_instance">
@@ -829,13 +892,14 @@
   <isPartOf rdf:resource="#PC_Laptop"/>
   <isPartOf rdf:resource="#PC"/>
   <isPartOf rdf:resource="#Root"/>
+  <rdf:type rdf:resource="#Part"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
   <isForItem rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
-  <hasSubProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
   <rdf:type rdf:resource="#Sub_Procedure"/>
+  <rdf:type rdf:resource="#Sony_Vaio_VGN_S260_repair_procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Toolbox">
@@ -848,6 +912,10 @@
 <owl:NamedIndividual rdf:about="#Upper_Casing">
   <rdf:type rdf:resource="#Part"/>
   <isPartOf rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
+  <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#Sony_Laptop"/>
+  <isPartOf rdf:resource="#PC"/>
+  <isPartOf rdf:resource="#Root"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Step_11414">
@@ -1097,12 +1165,24 @@
 
 <owl:NamedIndividual rdf:about="#Sony_Laptop">
   <rdf:type rdf:resource="#Item"/>
+  <hasPart rdf:resource="#battery"/>
+  <hasPart rdf:resource="#Logic_Board"/>
+  <hasPart rdf:resource="#Upper_Casing"/>
+  <hasPart rdf:resource="#cover"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INTEL_Core_i9_instance">
+  <rdf:type rdf:resource="#Item"/>
+  <isPartOf rdf:resource="#Intel_CPU"/>
+  <isPartOf rdf:resource="#PC_CPU"/>
+  <isPartOf rdf:resource="#PC"/>
+  <isPartOf rdf:resource="#Root"/>
+  <rdf:type rdf:resource="#Part"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
-  <isForItem rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
-  <rdf:type rdf:resource="#Sub_Procedure"/>
+  <isForItem rdf:resource="#INTEL_Core_i9_instance"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Toolbox">
@@ -1114,31 +1194,47 @@
 
 <owl:NamedIndividual rdf:about="#Keyboard">
   <rdf:type rdf:resource="#Part"/>
-  <isPartOf rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
+  <isPartOf rdf:resource="#INTEL_Core_i9_instance"/>
+  <isPartOf rdf:resource="#PC_CPU"/>
+  <isPartOf rdf:resource="#PC"/>
+  <isPartOf rdf:resource="#Root"/>
+  <isPartOf rdf:resource="#Intel_CPU"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Intel_CPU">
+  <rdf:type rdf:resource="#Item"/>
+  <hasPart rdf:resource="#battery"/>
+  <hasPart rdf:resource="#Keyboard"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_CPU">
+  <rdf:type rdf:resource="#Item"/>
+  <hasPart rdf:resource="#battery"/>
+  <hasPart rdf:resource="#Keyboard"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
   <isForItem rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
   <hasSubProcedure rdf:resource="#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
-  <hasSubProcedure rdf:resource="#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+  <rdf:type rdf:resource="#Sony_Vaio_VGN_S260_repair_procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox">
   <rdf:type rdf:resource="#Toolbox"/>
   <isForProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
-  <containsTool rdf:resource="#5mm_nut_driver"/>
   <containsTool rdf:resource="#ph00_phillips_screwdriver"/>
   <containsTool rdf:resource="#spudger"/>
+  <containsTool rdf:resource="#5mm_nut_driver"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Logic_Board">
   <rdf:type rdf:resource="#Part"/>
   <isPartOf rdf:resource="#Sony_Vaio_VGN_S260_instance"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#5mm_nut_driver">
-  <rdf:type rdf:resource="#Tool"/>
+  <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#Sony_Laptop"/>
+  <isPartOf rdf:resource="#PC"/>
+  <isPartOf rdf:resource="#Root"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Step_11436">
@@ -1449,6 +1545,11 @@
   <rdf:type rdf:resource="#Image"/>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#5mm_nut_driver">
+  <rdf:type rdf:resource="#Tool"/>
+  <isInToolbox rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox"/>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#Step_11449">
   <rdf:type rdf:resource="#Step"/>
   <isPartOfProcedure rdf:resource="#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
@@ -1503,11 +1604,13 @@
   <isPartOf rdf:resource="#PC_Laptop"/>
   <isPartOf rdf:resource="#PC"/>
   <isPartOf rdf:resource="#Root"/>
+  <rdf:type rdf:resource="#Part"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Gateway_SA1_Screen_Replacement_Procedure">
   <rdf:type rdf:resource="#Procedure"/>
   <isForItem rdf:resource="#Gateway_SA1_instance"/>
+  <rdf:type rdf:resource="#Gateway_SA1_repair_procedure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Gateway_SA1_Screen_Replacement_Toolbox">
@@ -1521,6 +1624,10 @@
 <owl:NamedIndividual rdf:about="#Screen">
   <rdf:type rdf:resource="#Part"/>
   <isPartOf rdf:resource="#Gateway_SA1_instance"/>
+  <isPartOf rdf:resource="#PC_Laptop"/>
+  <isPartOf rdf:resource="#Gateway_Laptop"/>
+  <isPartOf rdf:resource="#Root"/>
+  <isPartOf rdf:resource="#PC"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#phillips_screwdriver">
@@ -1838,6 +1945,10 @@
 
 <owl:NamedIndividual rdf:about="#Gateway_Laptop">
   <rdf:type rdf:resource="#Item"/>
+  <hasPart rdf:resource="#battery"/>
+  <hasPart rdf:resource="#Screen"/>
+  <hasPart rdf:resource="#cover"/>
+  <hasPart rdf:resource="#screen"/>
 </owl:NamedIndividual>
 
 <swrl:Variable rdf:about="urn:swrl#s"/>
@@ -1847,16 +1958,6 @@
 <swrl:Variable rdf:about="urn:swrl#t"/>
 
 <swrl:Variable rdf:about="urn:swrl#tb"/>
-
-<swrl:Variable rdf:about="urn:swrl#p2"/>
-
-<swrl:Variable rdf:about="urn:swrl#p1"/>
-
-<swrl:Variable rdf:about="urn:swrl#i"/>
-
-<swrl:Variable rdf:about="urn:swrl#i1"/>
-
-<swrl:Variable rdf:about="urn:swrl#i2"/>
 
 <swrl:Imp>
   <swrl:body>
@@ -1940,193 +2041,6 @@
           <swrl:propertyPredicate rdf:resource="#containsTool"/>
           <swrl:argument1 rdf:resource="urn:swrl#tb"/>
           <swrl:argument2 rdf:resource="urn:swrl#t"/>
-        </swrl:IndividualPropertyAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </rdf:Description>
-  </swrl:head>
-</swrl:Imp>
-
-<swrl:Imp>
-  <swrl:body>
-    <rdf:Description>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Sub_Procedure"/>
-          <swrl:argument1 rdf:resource="urn:swrl#p2"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <rdf:Description>
-          <rdf:first>
-            <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#Procedure"/>
-              <swrl:argument1 rdf:resource="urn:swrl#p1"/>
-            </swrl:ClassAtom>
-          </rdf:first>
-          <rdf:rest>
-            <rdf:Description>
-              <rdf:first>
-                <swrl:ClassAtom>
-                  <swrl:classPredicate rdf:resource="#Item"/>
-                  <swrl:argument1 rdf:resource="urn:swrl#i"/>
-                </swrl:ClassAtom>
-              </rdf:first>
-              <rdf:rest>
-                <rdf:Description>
-                  <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                      <swrl:propertyPredicate rdf:resource="#hasSubProcedure"/>
-                      <swrl:argument1 rdf:resource="urn:swrl#p1"/>
-                      <swrl:argument2 rdf:resource="urn:swrl#p2"/>
-                    </swrl:IndividualPropertyAtom>
-                  </rdf:first>
-                  <rdf:rest>
-                    <rdf:Description>
-                      <rdf:first>
-                        <swrl:IndividualPropertyAtom>
-                          <swrl:propertyPredicate rdf:resource="#isForItem"/>
-                          <swrl:argument1 rdf:resource="urn:swrl#p1"/>
-                          <swrl:argument2 rdf:resource="urn:swrl#i"/>
-                        </swrl:IndividualPropertyAtom>
-                      </rdf:first>
-                      <rdf:rest>
-                        <rdf:Description>
-                          <rdf:first>
-                            <swrl:IndividualPropertyAtom>
-                              <swrl:propertyPredicate rdf:resource="#isForItem"/>
-                              <swrl:argument1 rdf:resource="urn:swrl#p2"/>
-                              <swrl:argument2 rdf:resource="urn:swrl#i"/>
-                            </swrl:IndividualPropertyAtom>
-                          </rdf:first>
-                          <rdf:rest>
-                            <rdf:Description>
-                              <rdf:first>
-                                <swrl:DifferentIndividualsAtom>
-                                  <swrl:argument1 rdf:resource="urn:swrl#p1"/>
-                                  <swrl:argument2 rdf:resource="urn:swrl#p2"/>
-                                </swrl:DifferentIndividualsAtom>
-                              </rdf:first>
-                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                          </rdf:rest>
-                        </rdf:Description>
-                      </rdf:rest>
-                    </rdf:Description>
-                  </rdf:rest>
-                </rdf:Description>
-              </rdf:rest>
-            </rdf:Description>
-          </rdf:rest>
-        </rdf:Description>
-      </rdf:rest>
-    </rdf:Description>
-  </swrl:body>
-  <swrl:head>
-    <rdf:Description>
-      <rdf:first>
-        <swrl:DifferentIndividualsAtom>
-          <swrl:argument1 rdf:resource="urn:swrl#p1"/>
-          <swrl:argument2 rdf:resource="urn:swrl#p2"/>
-        </swrl:DifferentIndividualsAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </rdf:Description>
-  </swrl:head>
-</swrl:Imp>
-
-<swrl:Imp>
-  <swrl:body>
-    <rdf:Description>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Sub_Procedure"/>
-          <swrl:argument1 rdf:resource="urn:swrl#p2"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <rdf:Description>
-          <rdf:first>
-            <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#Procedure"/>
-              <swrl:argument1 rdf:resource="urn:swrl#p1"/>
-            </swrl:ClassAtom>
-          </rdf:first>
-          <rdf:rest>
-            <rdf:Description>
-              <rdf:first>
-                <swrl:ClassAtom>
-                  <swrl:classPredicate rdf:resource="#Item"/>
-                  <swrl:argument1 rdf:resource="urn:swrl#i1"/>
-                </swrl:ClassAtom>
-              </rdf:first>
-              <rdf:rest>
-                <rdf:Description>
-                  <rdf:first>
-                    <swrl:ClassAtom>
-                      <swrl:classPredicate rdf:resource="#Item"/>
-                      <swrl:argument1 rdf:resource="urn:swrl#i2"/>
-                    </swrl:ClassAtom>
-                  </rdf:first>
-                  <rdf:rest>
-                    <rdf:Description>
-                      <rdf:first>
-                        <swrl:IndividualPropertyAtom>
-                          <swrl:propertyPredicate rdf:resource="#hasSubProcedure"/>
-                          <swrl:argument1 rdf:resource="urn:swrl#p1"/>
-                          <swrl:argument2 rdf:resource="urn:swrl#p2"/>
-                        </swrl:IndividualPropertyAtom>
-                      </rdf:first>
-                      <rdf:rest>
-                        <rdf:Description>
-                          <rdf:first>
-                            <swrl:IndividualPropertyAtom>
-                              <swrl:propertyPredicate rdf:resource="#isForItem"/>
-                              <swrl:argument1 rdf:resource="urn:swrl#p1"/>
-                              <swrl:argument2 rdf:resource="urn:swrl#i1"/>
-                            </swrl:IndividualPropertyAtom>
-                          </rdf:first>
-                          <rdf:rest>
-                            <rdf:Description>
-                              <rdf:first>
-                                <swrl:IndividualPropertyAtom>
-                                  <swrl:propertyPredicate rdf:resource="#isForItem"/>
-                                  <swrl:argument1 rdf:resource="urn:swrl#p2"/>
-                                  <swrl:argument2 rdf:resource="urn:swrl#i2"/>
-                                </swrl:IndividualPropertyAtom>
-                              </rdf:first>
-                              <rdf:rest>
-                                <rdf:Description>
-                                  <rdf:first>
-                                    <swrl:DifferentIndividualsAtom>
-                                      <swrl:argument1 rdf:resource="urn:swrl#i1"/>
-                                      <swrl:argument2 rdf:resource="urn:swrl#i2"/>
-                                    </swrl:DifferentIndividualsAtom>
-                                  </rdf:first>
-                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                </rdf:Description>
-                              </rdf:rest>
-                            </rdf:Description>
-                          </rdf:rest>
-                        </rdf:Description>
-                      </rdf:rest>
-                    </rdf:Description>
-                  </rdf:rest>
-                </rdf:Description>
-              </rdf:rest>
-            </rdf:Description>
-          </rdf:rest>
-        </rdf:Description>
-      </rdf:rest>
-    </rdf:Description>
-  </swrl:body>
-  <swrl:head>
-    <rdf:Description>
-      <rdf:first>
-        <swrl:IndividualPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#hasPart"/>
-          <swrl:argument1 rdf:resource="urn:swrl#i1"/>
-          <swrl:argument2 rdf:resource="urn:swrl#i2"/>
         </swrl:IndividualPropertyAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
