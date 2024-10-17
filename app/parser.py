@@ -73,13 +73,13 @@ def create_class(cls, name):
         return cls(name)
     else:
         # Handle the case where the class does not exist
-        print(f"Class {cls} does not exist.")
-        return None
+        print(f"Class does not exist.")
+        return get_or_create(onto.Item, name)
 
 
 search_list = ['battery', 'cover', 'screen']
 
-data = selection("app\data\TEST.json", 5)
+data = selection("app\data\PC.json", 5)
 # Create instances and relationships
 for item in data:
     # Create Item instance
@@ -144,10 +144,11 @@ for p1 in onto.Procedure.instances():
             if steps_p2 < steps_p1:
                 # print(p1, p2)
                 p2.is_a.append(onto.Sub_Procedure)
+                p1.hasSubProcedure.append(p2)
 
 
 
-shacl_file = '''\
+shacl_file1 = '''\
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ex: <http://cits3005.org/pc-ontology.owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -184,7 +185,89 @@ ex:ToolUsageShape
 
 
 
-def run_shacl_validation():
+shacl_file2 = '''\
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <http://cits3005.org/pc-ontology.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:ToolUsageShape
+  a sh:NodeShape ;
+  sh:targetClass ex:Sub_Procedure ;
+  sh:property [
+    sh:path ex:isForItem ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path [sh:inversePath ex:isPartOfProcedure] ;
+    sh:minCount 1 ;
+  ] ;
+  sh:not [
+    sh:property [
+      sh:path rdf:type ;
+      sh:sparql [
+      sh:prefixes ( ex: rdf: ) ;
+    sh:select """
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX ex: <http://cits3005.org/pc-ontology.owl#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+        SELECT DISTINCT ?procedure $this
+            WHERE {
+
+                {
+                SELECT DISTINCT ?procedure $this
+                WHERE {
+                    ?procedure rdf:type ex:Procedure .
+                    ?procedure ex:isForItem ?item .
+                    
+                    $this rdf:type ex:Sub_Procedure .
+                    $this ex:isForItem ?subItem .
+
+                    ?step ex:isPartOfProcedure ?procedure .
+                    ?subStep ex:isPartOfProcedure $this .
+                 
+                    FILTER NOT EXISTS {
+                        ?otherStep ex:isPartOfProcedure $this.
+                        FILTER NOT EXISTS { ?otherStep ex:isPartOfProcedure ?procedure. }
+                    }
+
+                    {
+                        {
+                            SELECT ?procedure (COUNT(DISTINCT ?step) AS ?stepCount)
+                            WHERE {
+                            ?step ex:isPartOfProcedure ?procedure.
+                            }
+                            GROUP BY ?procedure
+                        }
+                        {
+                            SELECT $this (COUNT(DISTINCT ?subStep) AS ?subStepCount)
+                            WHERE {
+                            ?subStep ex:isPartOfProcedure $this.
+                            }
+                            GROUP BY $this
+                        }
+                        FILTER (?subStepCount < ?stepCount)
+                    }
+                }
+                }
+
+            $this ex:isForItem ?subItem .
+            ?procedure ex:isForItem ?item .
+
+            FILTER (?item = ?subItem || EXISTS { ?subItem ex:isPartOf ?item })
+
+            }
+    """ ;
+      ] ;
+    ] ;
+  ] ;
+  sh:message "No valid subprocedures found for the item or its parts" .
+'''
+
+
+
+def run_shacl_validation(shacl_file):
     graph = onto.world.as_rdflib_graph()
     shacl_graph = Graph().parse(data=shacl_file, format="turtle")
     conforms, report, message = validate(graph, shacl_graph=shacl_graph, advanced=True)
@@ -193,7 +276,8 @@ def run_shacl_validation():
     print(message)
 
 
-run_shacl_validation()
+#run_shacl_validation(shacl_file1)
+run_shacl_validation(shacl_file2)
 
 # Run the reasoner
 #with onto:
@@ -201,4 +285,4 @@ run_shacl_validation()
     #print(list(default_world.inconsistent_classes()))
 
 # Save the ontology
-#onto.save(file="app\data\ifix-it-kg.owl", format="rdfxml")
+onto.save(file="app\data\ifix-it-kg.owl", format="rdfxml")
