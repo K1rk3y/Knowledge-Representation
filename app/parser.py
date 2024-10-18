@@ -533,16 +533,3 @@ ex:TransitivePropertyShape
         sh:class sh:TransitiveProperty ;
     ] .
 '''
-
-
-
-# Input the path to the ontology file, the path to the raw data, the path you want to save the KG, the number of JSON objects you want to include, verbose
-tool_report, sp_report, gen_report, tool_report_f, sp_report_f, gen_report_f, incon_class = parser_api("app\data\ifix-it-ontology.owl", "app\data\PC.json", "app\data\ifix-it-kg.owl", 100, True)
-
-print("Tool Consistency Report Before Reasoning: ", tool_report)
-print("Sub Procedure Consistency Report Before Reasoning: ", sp_report)
-print("General Consistency Report Before Reasoning: ", gen_report)
-print("Tool Consistency Report After Reasoning: ", tool_report_f)
-print("Sub Procedure Consistency After Before Reasoning: ", sp_report_f)
-print("General Consistency Report After Reasoning: ", gen_report_f)
-print("Inconsistent Classes Report After Reasoning: ", incon_class)

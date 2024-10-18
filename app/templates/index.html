@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RDF Knowledge Graph Visualization</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -157,6 +158,28 @@
         overflow-wrap: break-word;
         white-space: normal;
     }
+
+    #error-display {
+        background-color: #fee;
+        color: #c00;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 20px;
+        display: none;
+    }
+    .load-button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
                
     </style>
 
@@ -178,7 +201,8 @@
 <body>
     <div class="container">
         <h1>RDF Knowledge Graph Visualization</h1>
-        
+        <button id="load-kg" class="load-button">LOAD Knowledge Graph</button>
+        <div id="error-display"></div>
          <div class="query-form">
             <form method="POST">
                 <!-- Add custom SPARQL query textarea -->
@@ -364,6 +388,36 @@
         document.addEventListener('click', function() {
             const infoBox = document.getElementById('info-box');
             infoBox.style.display = 'none';
+        });
+    });
+
+    $(document).ready(function() {
+        if ("{{ error_message }}") {
+            $('#error-display').show();
+        }
+
+        $('#load-kg').click(function() {
+            $.ajax({
+                url: '/load_kg',
+                type: 'POST',
+                success: function(response) {
+                    if (response.error) {
+                        $('#error-display').text(response.error).show();
+                    } else {
+                        $('#error-display').text(response.message).show();
+                        
+                        // Set a timeout for 5 seconds before showing the alert
+                        setTimeout(function() {
+                            if (confirm("Knowledge graph loaded, do you wish to reload the application?")) {
+                                location.reload();
+                            }
+                        }, 5000);
+                    }
+                },
+                error: function() {
+                    $('#error-display').text('An error occurred while loading the knowledge graph.').show();
+                }
+            });
         });
     });
     </script>
