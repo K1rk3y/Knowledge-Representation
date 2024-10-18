@@ -51,8 +51,35 @@ def index():
     if request.method == 'POST':
         # Check if the user entered a custom SPARQL query
         custom_query = request.form.get('custom_sparql', '').strip()
+        count_type = request.form.get('count_type')
+        procedure_type = request.form.get('procedure_type')
+
+        print(count_type, procedure_type)
 
         try:
+            if count_type and procedure_type:
+                if count_type == 'steps':
+                    query = f"""
+                    {custom_query_prefixes}
+                    SELECT (COUNT(DISTINCT ?step) AS ?stepCount)
+                    WHERE {{
+                      ?procedure rdf:type onto:{procedure_type} .
+                      ?step onto:isPartOfProcedure ?procedure .
+                    }}
+                    """
+                else:  # count_type == 'procedure'
+                    query = f"""
+                    {custom_query_prefixes}
+                    SELECT (COUNT(DISTINCT ?procedure) AS ?procedureCount)
+                    WHERE {{
+                      ?procedure rdf:type onto:{procedure_type} .
+                    }}
+                    """
+
+                results = g.query(query)
+
+                query_results = format_results(results)
+
             if custom_query:
                 # Prepend the defined prefixes to the user's query for custom queries
                 full_query = custom_query_prefixes + custom_query
@@ -139,7 +166,7 @@ def index():
 def load_kg():
     try:
         # Change the data file path (second param) to app\data\TEST.json and the number of objects being loaded (fourth param) to 5, if u want to see our error recogonition capabilities
-        tool_report, sp_report, _, tool_report_f, sp_report_f, gen_report_f, incon_class = parser_api("app\data\ifix-it-ontology.owl", "app\data\PC.json", "app\data\ifix-it-kg.owl", 100, True)
+        tool_report, sp_report, _, tool_report_f, sp_report_f, gen_report_f, incon_class = parser_api("app\data\ifix-it-ontology.owl", "app\data\PC.json", "app\data\ifix-it-kg.owl", 5, True)
 
         opt = serialize_reports(tool_report, sp_report, tool_report_f, sp_report_f, gen_report_f, incon_class)
 
