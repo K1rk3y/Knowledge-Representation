@@ -1,0 +1,2201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="http://cits3005.org/pc-ontology.owl#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_13079">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_13079"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TgPTif6VHSFgNIim.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#hasText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#describes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Upper_Casing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#INTEL_Core_i9_instance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Intel_CPU"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_CPU"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11612">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the six screw covers on the front bezel with the sharp point of the spudger. The bottom two are more difficult to remove.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12020">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hold keyboard from the top and gently pull towards the LCD screen to remove the keyboard from the case Don't pull on the keyboard too forcefully because it is attached to the motherboard with a short, thin ribbon cable</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/YP4D3qTGeLYoMIUk.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/KuEoUAJoOqjHns5w.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Keyboard_Replacement_Toolbox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Toolbox"/>
+    <isForProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#ph00_phillips_screwdriver"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#isPartOfProcedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#hasStep"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/CuHsvPOtIqVxeMls.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N204c019998174869b3b93d5694124e3b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Compaq_Evo_N1000v"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4e68f6be220c4879b1ea8a0f106f51ca">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gVpRrDpwsj1yGUDp.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc24740bbcc8145a1a61171c89e14cffe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Fujitsu_Siemens_Amilo_Pro"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12458">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12458"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WxSRNoB5gxVV6DaX.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_7A2L">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5343158647f944739c20f3149d671e61">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N09ddf81be3f54d3aaec857255b2a84df"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#IBM_ThinkPad_560z_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N10ca76ef350446f8b1fab39959f0cda1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/eZTRTWQhAnwxWcjT.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Screen">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0aa044255f4d40deabfc5db2883fe407">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Acer_Aspire_5100"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11617">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11617"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/Yew3BSYZGCoJZKVF.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/GDguQULjHDZSKJxR.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/b5BZBZGXIRE5ghoF.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12022">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using a small spudger, pull back on the black bar to release the blue lever</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12051">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the three tape strips that hold down the cables. Be careful not to tear any of the tape. The piece holding down the webcam wires is especially delicate.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N574953ce0f134df0a1078b7845943c24">
+    <rdf:first rdf:nodeID="N12976578d9894f04bfa4409c560abed0"/>
+    <rdf:rest rdf:nodeID="N928b2fadc05d4c7ba42ffd75d1cb4da0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11621">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11621"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/pf2AyhhWTxiRVTmE.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#phillips_screwdriver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11443">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the casing and the orange ribbon</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/C3GMiqK2KQ3YLX1n.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf3be0f06cb0c4fc38f2fba6878ff7228">
+    <rdf:first rdf:nodeID="Necfb57ac66f1405c89146b337e2d21c3"/>
+    <rdf:rest rdf:nodeID="Na8cafa0aa56e484b94348e53d065cb71"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb41adf72360640ff9457265d19b7bf0f">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://cits3005.org/pc-ontology.owl#isPartOfProcedure"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+    <swrl:argument2 rdf:resource="urn:swrl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbe501e99a12a45fa924238a07618b07e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nf16f921f5c3d4faf837be6e5f9daf936"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/MKcusjrUmZUKIZVA.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11423">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lift up lever underneath the ribbon to detach the keyboard.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#hasStep">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#isPartOfProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/O14XLW4jFfpOxnTK.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11642">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11642"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/mJV55uMRUXWoZRTX.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7788ea3d1bd84bf6b0e526f9d7040018">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="Nec254d6844b74d29b9bf28e6975c28ec"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11436">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11436"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BHtuUrtrDVtjV5sY.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ZjPOAgbWweKIbYNm.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11427">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11427"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QmWABaEnqqelMBNm.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/CBDikjHDsBaTfRVN.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/URHmM5Dsj46YtySt.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Toolbox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Toolbox"/>
+    <isForProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#ph00_phillips_screwdriver"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N11be6da1965e4297827b0d2e3eabe93a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="N43eac0ff387f486f862249ef48d56a83"/>
+    <swrl:head rdf:nodeID="N8898b98055f7477fb781c1e618514ac3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_6J2L">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11420">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11420"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/s4jLnNNhVflEGEsv.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/144Sm1RRKfHeAsAv.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#ph00_phillips_screwdriver">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Tool"/>
+    <isInToolbox rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_instance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12051">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12051"/>
+    <hasHazard rdf:resource="http://cits3005.org/pc-ontology.owl#Hazard_12051"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QcgkXfFHy3j2BJJT.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RXPRPDMBw1MSxwps.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11447">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate screws on the logic board Remove the screws</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/pUNnBWwPCdBFqga4.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11786">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11786"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/2ahoN1SZaDunCRlW.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5a00f78ffea545cdb3a44e5fc0d5d322">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Ncf30e1a68a124be999beda1413653750"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Acer_Aspire_5100">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11421">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11421"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/SIOmX15FSGhdHVFR.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11427">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the laptop over so the Vaio logo is face up Use the spudger to pop up the upper casing Do not lift too much as the Uppercasing is attached to wires underneath Remove the wires that are attaching the uppercasing to the motherboard</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Gateway_SA1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4df4477c4c1e4fccb4d4f5542c8573db">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="Ncc1ac0f81cbb44009082b1bc3bad840a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11786">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power down the laptop and remove the battery. Open the laptop cover all of the way.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11449">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the LCD display ribbon It is helpful to use the spudger here This is difficult to remove</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11640">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the four screws holding the optical drive to the logic board Remove the screws</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N12976578d9894f04bfa4409c560abed0">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#IBM_ThinkPad_T42">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N23b4c686e1a94034a4bda2d97092512b">
+    <rdf:first rdf:nodeID="N9adda38ebb9f4e27b7cc4a7ffb1c48bd"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Root">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#cover"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Upper_Casing"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#CD_Drive"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Keyboard"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#screen"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Screen"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#battery"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Logic_Board"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11645">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the ethernet ports</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N11e28623841f4a1ababdd52a72a6b3fe">
+    <rdf:first rdf:nodeID="Ndc5e12d96f314368adae23d9bcbae985"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12017">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12017"/>
+    <hasHazard rdf:resource="http://cits3005.org/pc-ontology.owl#Hazard_12017"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/bDghaIwVmHtPtMZQ.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/C3GMiqK2KQ3YLX1n.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/aSPCQC6EeTlfKx5Z.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11422">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Press down on the outer gray shell around the keyboard Use the spudger to gently lift keyboard Do not pull up the keyboard too far as it is attached to a ribbon underneath</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_13075">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Press in the tab on the bottom right side of the CD drive The tab comes out on its own; there is no need to pull it out manually.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#IBM_ThinkPad_T41_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="Nae2580274e7543898bea390e90c7ffdb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#cover">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11448">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate nut on logic board Take out the nut using the 5mm nut driver Using a magnetic screwdriver handle will also work as well</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12620">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12620"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/S6lEYvUrYwibbAWp.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#screen">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Toolbox"/>
+    <isForProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#5mm_nut_driver"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#ph00_phillips_screwdriver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_F360_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N7df4509f719c455cb0efbb288cf45f22"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Acer_Aspire_One_D150">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndc5e12d96f314368adae23d9bcbae985">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#isForItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf6d521a022564a9fbb4d97e72d64bd5a">
+    <rdf:first rdf:nodeID="N0aa044255f4d40deabfc5db2883fe407"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11442">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find orange ribbon that is connected to the hard drive. Find the holder of the ribbon and pop the ribbon off from it</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12556">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12556"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/evmyWUnlT4WRxNAd.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11449">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11449"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/XnvOTQgojeCxPAdl.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RPuWHKHlVU1g4XKn.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Gateway_SA1_instance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11617">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the front bezel by prying it off with the wedged end of the spudger. Verify that your spudger does not touch the LCD. The screen inverter is now exposed below the LCD.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11437">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11437"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WTQYZr6I2AmlrAIW.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/rbFkwhJiNob3SXkE.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11650">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11650"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/HXtFZcyo2YHjrPX3.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/CuHsvPOtIqVxeMls.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/DKWsAypFJDKJDEZl.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/GDguQULjHDZSKJxR.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EFiPpTMG3pvBOrhX.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11423">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11423"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/aLkQAZWVgEuHJDwh.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/MKcusjrUmZUKIZVA.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12020">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12020"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QA5Oqh3xJYJcYJAc.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12022">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12022"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TAuWhDomSD6ICOYh.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gUBVXCcjkITVFUG1.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12621">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slide the latch on the left directly below the battery to unlock and pull out the battery as shown. The latch must be held in position to remove the battery.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Toolbox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Toolbox"/>
+    <isForProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#ph00_phillips_screwdriver"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#phillips_screwdriver"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11443">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11443"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1D1yWj3RVXoANgbf.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11438">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the screw holding the optical drive casing to the logic board Remove this screw</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11625">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11625"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lY4GvfHSv5IhiJGx.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11621">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the single 3.8mm Phillips screw mounting the screen inverter to the computer.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na9a0ada3973249eca9cff112bbde9bb5">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="Nf6d521a022564a9fbb4d97e72d64bd5a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc028bf7197af4c10b71ea325d3ac1358">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N00b77628c579438084a3ee7afb089f99"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11436">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the yellow power adapter Follow its wire to white logic board connector Pull out the wire from white logic board connector</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/evmyWUnlT4WRxNAd.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf6d4d4f8691841008c11fd286e9db522">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Acer_Aspire_One_D150"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#PC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#cover"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#CD_Drive"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Upper_Casing"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#screen"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Keyboard"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Screen"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#battery"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Logic_Board"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#IBM_ThinkPad_560z">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/cUTmGPmPYMaAANEX.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11414">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11414"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/2qtXNUeZUOPTmEVr.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lWfMZPnKXbSrDtBe.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/6RWAhEICt4o1GXOa.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11683">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11683"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/UZQA11VcIHy6oJnn.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#isPartOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11640">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11640"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/KuEoUAJoOqjHns5w.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1Kq1pBHLl3RXvFYf.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11439">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate brown locking tab above optical drive. Lift up on brown locking tab until ribbon is loose Gently slide out and remove the optical drive from the computer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="Nad4b69cac16d44fb8074122e31654dbd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Fujitsu_Siemens_Amilo_Pro">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8dacaf7a6c3e4dc79226508c1f3bdb10">
+    <rdf:first rdf:nodeID="N1c7711dac3bd447e8c1eb2b4a73f2eda"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Laptop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#cover"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#CD_Drive"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#screen"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#battery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_repair_procedure"/>
+    <isForItem rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7a9dbac74e8f41a689dda8675fdc9c8a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N4df4477c4c1e4fccb4d4f5542c8573db"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11421">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the computer over again so the Vaio logo is face up Open the lid</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf10e134ebfd04c669d494cc988f8ab05">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N11e28623841f4a1ababdd52a72a6b3fe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N93dd53079e4e4af58902cc24b81ac75b">
+    <rdf:first rdf:nodeID="N0ef5803b88cd4fa69aefa567490984ff"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#IBM_ThinkPad_T41">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Toshiba_Satellite_M45_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N8909c11e7f6443b1a78ed2a2ead2dcbe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N95cc8f3bb26743508a8c97673dab8f64">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N7a4076d1b2c9493f90159fa7fe756c3e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N99a36904869c456f98fa16f2a2f760e4">
+    <rdf:first rdf:nodeID="N5f24ae3575d14f3e957a625328534c5f"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12553">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12553"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/xgc2vfEYaxVSXmT1.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1ZPxXQxFlrLjQvmc.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Hazard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nafcf0743263f4ca8aa9d432b0ffdc369">
+    <rdf:first rdf:nodeID="N204c019998174869b3b93d5694124e3b"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EENvsrkNMbyhJjSt.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#hasSubProcedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/6RWAhEICt4o1GXOa.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Acer_Aspire_5100_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N6d30c5ff0f7b4e7babfaefee321f5a77"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#containsTool">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Toolbox"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Tool"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#isInToolbox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#hasOrder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RXPRPDMBw1MSxwps.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#battery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#INTEL_Core_i9_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Intel_CPU"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_CPU"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_Laptop"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nec254d6844b74d29b9bf28e6975c28ec">
+    <rdf:first rdf:nodeID="N363569409b834a5eba44aa1eb3397cf2"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Compaq_Evo_N1000v_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N1c9eff01c5f14b61894b2d915f0e3f56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N41c000a1ba4d4fbd8ac912cb961a6f71">
+    <rdf:first rdf:nodeID="Nd3241a3430fc4716b0a43e3d8a877465"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QcgkXfFHy3j2BJJT.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#isInToolbox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Tool"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Toolbox"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#containsTool"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd3241a3430fc4716b0a43e3d8a877465">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <isForItem rdf:resource="http://cits3005.org/pc-ontology.owl#INTEL_Core_i9_instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Necfb57ac66f1405c89146b337e2d21c3">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://cits3005.org/pc-ontology.owl#Toolbox"/>
+    <swrl:argument1 rdf:resource="urn:swrl#tb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11439">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11439"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WMhDVjYQVUETHd3f.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TZlrVJvYQsPZCZKO.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11425">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11425"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/niOJPURiQoDNTGgF.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/DN6kNXK4hqFUMQAF.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ZI565sLWlIDE6QEF.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12021">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Once keyboard is out of the case, lay it face-down on the track pad</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Item">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1ZPxXQxFlrLjQvmc.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/mJV55uMRUXWoZRTX.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Latitude_E6400_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N17e3c0da3c8f4b288302a3f07bbcc067"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/s4jLnNNhVflEGEsv.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/X1iGHHZrIUe6VE6Q.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf66c6c59ff454733999cf332cd99feb0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N62795c43b2374baba55588982dfb70d8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N261f1fd9d9b848149001785f0766826d">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N1033fbe36b134d9cab676f7089a4af77"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TgPTif6VHSFgNIim.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_instance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#describes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#hasText"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N09ddf81be3f54d3aaec857255b2a84df">
+    <rdf:first rdf:nodeID="N0be6a62584fc485cb20e0bee90569ddc"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/KjtYYqwZCqFtLOIo.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11450">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11450"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/FKJDVd4e2RkvSPOn.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/E2D1cvCFnTvg3aJg.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/MQfYUiwQseSHKesi.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N434555d2079d498d8d5bd02346d1494c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_6J2L"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nad02300557374934a4be72516bbde442">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Inspiron_1150"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Asus_V6800V_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N992cdf260ecf46d0ad07cbc6c057705f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Tool">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TAuWhDomSD6ICOYh.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11448">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11448"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/nU2GLkXUoAvTDRMS.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/H6NRlyZkgXMEJhAH.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#5mm_nut_driver"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#ph00_phillips_screwdriver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12621">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12621"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/KjtYYqwZCqFtLOIo.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#isUsedInStep">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Tool"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#usesTool"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11645">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11645"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LLbnyGxbu1yHHifZ.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/cUTmGPmPYMaAANEX.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11422">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11422"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/dl5V2jQnZkf2cgwL.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/oiGLiGDohVPGdsKK.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Keyboard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#INTEL_Core_i9_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Intel_CPU"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_CPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11623">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11623"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/O14XLW4jFfpOxnTK.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/fqf2lFGvUtZDHBWY.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#phillips_screwdriver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12458">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pull up on the metal bar connected to the socket to detach the ribbon cable</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11608">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11608"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LCfkBnTNChYVdYMZ.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gVpRrDpwsj1yGUDp.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12555">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12555"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/6jWSKh3uK36VVfGP.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EFepPgHXZFUT2Xhl.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Gateway_SA1_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N52b4bc9fbd5444008c8b11b9886c7678"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N992cdf260ecf46d0ad07cbc6c057705f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N3d73d7f6fb2341e0ac23aa746333d905"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12019">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12019"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BwGFsYFJ1MNJADcV.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#ph00_phillips_screwdriver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#s">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N10ca76ef350446f8b1fab39959f0cda1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nbceb3f5c7cb14cbfbeaf20c2cb2b4efd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12546">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the six 5.9 mm Philips screws securing the screen bezel.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/H6NRlyZkgXMEJhAH.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/XnvOTQgojeCxPAdl.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_33175">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove memory/wireless compartment cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Toolbox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Toolbox"/>
+    <isForProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#ph00_phillips_screwdriver"/>
+    <containsTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11437">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the screw next to the yellow power adapter Lift out power adapter and fan filter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N95332d03231540bba7b88c4ef3bd3cb0">
+    <rdf:first rdf:nodeID="N4e68f6be220c4879b1ea8a0f106f51ca"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_F420_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N95cc8f3bb26743508a8c97673dab8f64"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#CD_Drive">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0ef5803b88cd4fa69aefa567490984ff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Alienware_M15x"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11438">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11438"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/e2uGuL1gACrloGaU.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N172ef16b326b403192b74cce2b3bea4f">
+    <rdf:first rdf:nodeID="Nf532eb3152b9444caa5122058a9a0a4d"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5ed117ca8ba24941b305eb742da87556">
+    <rdf:first rdf:nodeID="N19cbda1b7c1e4deba2567cd3b9516ae6"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_7A2L_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N10c75a64e2e84a968e309eaeea566046"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N19cbda1b7c1e4deba2567cd3b9516ae6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Toshiba_Satellite_1805_S177"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7df4509f719c455cb0efbb288cf45f22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Ncd0047458f5c409a93de5e7402e28017"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf532eb3152b9444caa5122058a9a0a4d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_F420"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nae2580274e7543898bea390e90c7ffdb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N7788ea3d1bd84bf6b0e526f9d7040018"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11650">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the screws on the fan filter casing Remove these screws</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1c9eff01c5f14b61894b2d915f0e3f56">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N6236edd8709a487ab5a74cd5e2d34b74"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1767305535f343c080307c87ed8186ac">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N41c000a1ba4d4fbd8ac912cb961a6f71"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11447">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11447"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/pUNnBWwPCdBFqga4.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1Kq1pBHLl3RXvFYf.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Toolbox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_33175">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_33175"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lv4W2iJlSs4JiNdy.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#PC_Laptop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#cover"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#CD_Drive"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Upper_Casing"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#screen"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Screen"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#battery"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Logic_Board"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Sub_Procedure"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_repair_procedure"/>
+    <isForItem rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_repair_procedure"/>
+    <isForItem rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_instance"/>
+    <hasSubProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#usesTool">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Tool"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#isUsedInStep"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11670">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11670"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/PduMKUQ3XlFaOrw4.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Hazard_12017">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Hazard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_repair_procedure"/>
+    <isForItem rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N39aab95c86344790996eace53e176534">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N143eba8c32db4648ab96a04970f42cd0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11417">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With the tabs still in the unlock position, slide the battery away from the main case.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sub_Procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_13079">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gently pull the tab to remove the disk tray.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11445">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the screws for the second ethernet circuit board Remove the screws</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Gateway_Laptop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#cover"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#screen"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Screen"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#battery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lWfMZPnKXbSrDtBe.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LCfkBnTNChYVdYMZ.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11625">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unplug the cable from the webcam board. Be gentle, do not use excessive force or you may break the connection.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="Nd87189b9e63947f9bad48b35884afe4c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Part">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11441">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the screws holding the hard drive casing in place. Remove the screws</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#isForProcedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Toolbox"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#isPartOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndb3a3178d9f646cbb2e138a2ccdb6c00">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="Nd700dc0a64f94abba400158845cea91d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_33174">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_33174"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RhVbwkfwcCDbmP6U.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/aSPCQC6EeTlfKx5Z.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12021">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12021"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/GBUxtBDHiMMIo24Y.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EsL12USdc1aGVj4E.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Inspiron_1150">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5f24ae3575d14f3e957a625328534c5f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_F360"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12553">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use your finger, or the spudger, to pry the inverter board out. This exposes the wires behind it.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6236edd8709a487ab5a74cd5e2d34b74">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="Nafcf0743263f4ca8aa9d432b0ffdc369"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11425">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip so the Vaio Logo is face down Locate and remove a total of 8 screws on the bottom.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3d73d7f6fb2341e0ac23aa746333d905">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N23b4c686e1a94034a4bda2d97092512b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0be6a62584fc485cb20e0bee90569ddc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_7A2L"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#hasSubclass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/xgc2vfEYaxVSXmT1.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11417">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Upper_Casing_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Keyboard_Replacement_Procedure"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11417"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/UxVpQcqCDhiwRdVS.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EENvsrkNMbyhJjSt.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11642">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate ribbon connecting optical drive case to logic board. Pop off the ribbon Remove the metal PC-Card cage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RhVbwkfwcCDbmP6U.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/nU2GLkXUoAvTDRMS.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EFepPgHXZFUT2Xhl.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Asus_V6800V">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12546">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12546"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/cY5WYZeYkfdfr1oK.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#phillips_screwdriver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/S6lEYvUrYwibbAWp.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lFMZGJQDFDSgOTVT.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbceb3f5c7cb14cbfbeaf20c2cb2b4efd">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N8dacaf7a6c3e4dc79226508c1f3bdb10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/CBDikjHDsBaTfRVN.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12019">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unscrew the top portion of the keyboard using a #00 screwdriver</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gQVHZcTtGUMPQoJN.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/rbFkwhJiNob3SXkE.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_981L">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Latitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#cover"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#CD_Drive"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#screen"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#battery"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc0c77b6ed58c4e54a3eceb4d20a11428">
+    <rdf:first rdf:nodeID="Nf94240e0ea074116b00607507fdfef8b"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#hasImage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#illustratesStep"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12554">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Separate the screen from the display cover. Do not touch the back of the screen.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/P3EWVmjvFMBN45ii.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf94240e0ea074116b00607507fdfef8b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_981L"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N62795c43b2374baba55588982dfb70d8">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="Na4aa3b2e0e1c4b63a3362401398d717f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Laptop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#cover"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Upper_Casing"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#battery"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Logic_Board"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Inspiron_1150_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="Nf66c6c59ff454733999cf332cd99feb0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na4aa3b2e0e1c4b63a3362401398d717f">
+    <rdf:first rdf:nodeID="Nad02300557374934a4be72516bbde442"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WMhDVjYQVUETHd3f.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TnOdBL1beKD1c1IP.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na3d02208dd9c49499f6882f95a1316ca">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="Nc0c77b6ed58c4e54a3eceb4d20a11428"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8d2566cc8ac5448c8d53108da2a3e2c4">
+    <rdf:first rdf:nodeID="Nb41adf72360640ff9457265d19b7bf0f"/>
+    <rdf:rest rdf:nodeID="N73a7d68e25484e54bab6643c9d6f5bc0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WxSRNoB5gxVV6DaX.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Compaq_Evo_N1000v">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12547">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unplug the LCD back light cables from the right side of the screen inverter.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/oiGLiGDohVPGdsKK.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_13075">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_D620_CD_Drive_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_13075"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/eZTRTWQhAnwxWcjT.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/X1iGHHZrIUe6VE6Q.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc6fbffbe7ee74912b387dcde63b89e98">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Panasonic_Toughbook_CF_29"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3c6c494c4a284ed4be5002e315700b78">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N95332d03231540bba7b88c4ef3bd3cb0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Logic_Board">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Part"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_instance"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#PC_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Laptop"/>
+    <isPartOf rdf:resource="http://cits3005.org/pc-ontology.owl#Root"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#IBM_ThinkPad_T42_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N7a9dbac74e8f41a689dda8675fdc9c8a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/pf2AyhhWTxiRVTmE.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Image">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Toshiba_Satellite_1805_S177">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncec14689e7a543f895c822e3999d9c79">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Hazard_12051">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Hazard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/aLkQAZWVgEuHJDwh.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#5mm_nut_driver">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Tool"/>
+    <isInToolbox rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gUBVXCcjkITVFUG1.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N71679b67ddf849d38712f508a11f0dc5">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://cits3005.org/pc-ontology.owl#isForProcedure"/>
+    <swrl:argument1 rdf:resource="urn:swrl#tb"/>
+    <swrl:argument2 rdf:resource="urn:swrl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11450">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gently lift the logic board from the laptop. The logic board will be attached to the network wireless chip, which is also attached to the base of the laptop Remove the chip by poping the tabs on the side Slide out the network card You are now free to take the logic board away from the base</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QA5Oqh3xJYJcYJAc.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#spudger">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Tool"/>
+    <isInToolbox rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Toolbox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12547">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12547"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1YjjUawcYCXV4Jfx.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/cY5WYZeYkfdfr1oK.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#illustratesStep">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <owl:inverseOf rdf:resource="http://cits3005.org/pc-ontology.owl#hasImage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11442">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11442"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/gQVHZcTtGUMPQoJN.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11683">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the screws near the Ethernet Port circuit board Remove the screws.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11670">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the uppercasing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/xcpFxYENS6oULXo2.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11445">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11445"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EFiPpTMG3pvBOrhX.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#phillips_screwdriver">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Tool"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf16f921f5c3d4faf837be6e5f9daf936">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N1ad91611ca1d46edbf7974fd5e997582"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BwGFsYFJ1MNJADcV.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Panasonic_Toughbook_CF_29">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1033fbe36b134d9cab676f7089a4af77">
+    <rdf:first rdf:nodeID="N434555d2079d498d8d5bd02346d1494c"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/PduMKUQ3XlFaOrw4.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_F420">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6dfed41cc7834bdd8a38af80af80c353">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Dell_Latitude_E6400"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Toshiba_Satellite_1805_S177_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="Nc028bf7197af4c10b71ea325d3ac1358"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11441">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11441"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BxGX1XwHWhCL2cPd.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ONsXf56LAijXQyTD.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N17e3c0da3c8f4b288302a3f07bbcc067">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N14bcddea50a142d89f21105306d69c6f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1YjjUawcYCXV4Jfx.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N928b2fadc05d4c7ba42ffd75d1cb4da0">
+    <rdf:first rdf:nodeID="N775914925ce54819b4efb5118e8e8703"/>
+    <rdf:rest rdf:nodeID="Nf3be0f06cb0c4fc38f2fba6878ff7228"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Alienware_M15x_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N5a00f78ffea545cdb3a44e5fc0d5d322"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Toshiba_Satellite_M45">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Fujitsu_Siemens_Amilo_Pro_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="Ne5b38789370b4535be6159e80882bbd3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/b5BZBZGXIRE5ghoF.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/2ahoN1SZaDunCRlW.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc04013aae0204d8a8eefc89d995fabd1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://cits3005.org/pc-ontology.owl#usesTool"/>
+    <swrl:argument1 rdf:resource="urn:swrl#s"/>
+    <swrl:argument2 rdf:resource="urn:swrl#t"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9adda38ebb9f4e27b7cc4a7ffb1c48bd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Asus_V6800V"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12052">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the four 2.8 mm Phillips screws that secure the screen to the mounting bracket using a screwdriver. There will be two screws on either side of the mounting bracket.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncf30e1a68a124be999beda1413653750">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N93dd53079e4e4af58902cc24b81ac75b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11446">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the blue ribbon from the Ethernet Circuit Board</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nad4b69cac16d44fb8074122e31654dbd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N1767305535f343c080307c87ed8186ac"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Dell_Latitude_E6400">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neaf552d0a0da402782e8fc4adb7a9a9a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://cits3005.org/pc-ontology.owl#containsTool"/>
+    <swrl:argument1 rdf:resource="urn:swrl#tb"/>
+    <swrl:argument2 rdf:resource="urn:swrl#t"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#PC_CPU">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Keyboard"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#battery"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncc1ac0f81cbb44009082b1bc3bad840a">
+    <rdf:first rdf:nodeID="N50ed0081386243bd913427005cbc0ee7"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Panasonic_Toughbook_CF_29_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="Nc18a251874994e48b2761c2c3ce37673"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11420">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flip the computer over so the Vaio logo is facedown Unscrew the 2 screws next to the battery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11612">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11612"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/YP4D3qTGeLYoMIUk.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LEybNoYHPUZHlgGh.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#spudger"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndce86561cc8347a5835c03156b3a1fd4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#Toshiba_Satellite_M45"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LLbnyGxbu1yHHifZ.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N73a7d68e25484e54bab6643c9d6f5bc0">
+    <rdf:first rdf:nodeID="N71679b67ddf849d38712f508a11f0dc5"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Alienware_M15x">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Intel_CPU">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#Keyboard"/>
+    <hasPart rdf:resource="http://cits3005.org/pc-ontology.owl#battery"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N009ffe078a3943089193313cd622b023">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N2050c40969bb483996ebdcdc75ced978"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_F360">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#t">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1ad91611ca1d46edbf7974fd5e997582">
+    <rdf:first rdf:nodeID="Nf6d4d4f8691841008c11fd286e9db522"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12555">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unplug the display data cable from the screen connector. This connection is very fragile; do not use excessive force. The screen should now be free from all wire connections.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/2qtXNUeZUOPTmEVr.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12556">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You can now remove and replace the screen.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N363569409b834a5eba44aa1eb3397cf2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#IBM_ThinkPad_T41"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/LEybNoYHPUZHlgGh.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_6J2L_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="Nb2c8db7f191246759fdca0a397b83365"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/UxVpQcqCDhiwRdVS.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/6jWSKh3uK36VVfGP.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_33174">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find and remove 5 screws (they all have arrows next to them) from cover</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/e2uGuL1gACrloGaU.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12052">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12052"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lFMZGJQDFDSgOTVT.standard"/>
+    <usesTool rdf:resource="http://cits3005.org/pc-ontology.owl#phillips_screwdriver"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BxGX1XwHWhCL2cPd.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N43eac0ff387f486f862249ef48d56a83">
+    <rdf:first rdf:nodeID="Ncec14689e7a543f895c822e3999d9c79"/>
+    <rdf:rest rdf:nodeID="N574953ce0f134df0a1078b7845943c24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ZI565sLWlIDE6QEF.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/DN6kNXK4hqFUMQAF.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11623">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the six screws that mount the screen to the hinge mounts. Two 2.5 mm Phillips screws. Four 3.8 mm Phillips screws.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncd0047458f5c409a93de5e7402e28017">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N99a36904869c456f98fa16f2a2f760e4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1c7711dac3bd447e8c1eb2b4a73f2eda">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#IBM_ThinkPad_560z"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_11446">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260_Logic_Board_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_11446"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/xcpFxYENS6oULXo2.standard"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TnOdBL1beKD1c1IP.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N50ed0081386243bd913427005cbc0ee7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://cits3005.org/pc-ontology.owl#isForItem"/>
+    <owl:someValuesFrom rdf:resource="http://cits3005.org/pc-ontology.owl#IBM_ThinkPad_T42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N10c75a64e2e84a968e309eaeea566046">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N5343158647f944739c20f3149d671e61"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0edc1a2689bd44e6844ea4278988a676">
+    <rdf:first rdf:nodeID="N6dfed41cc7834bdd8a38af80af80c353"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step_12554">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <isPartOfProcedure rdf:resource="http://cits3005.org/pc-ontology.owl#Gateway_SA1_Screen_Replacement_Procedure"/>
+    <hasText rdf:resource="http://cits3005.org/pc-ontology.owl#Text_12554"/>
+    <hasImage rdf:resource="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/P3EWVmjvFMBN45ii.standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N14bcddea50a142d89f21105306d69c6f">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N0edc1a2689bd44e6844ea4278988a676"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12620">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Move the latch to the right of the battery to unlock.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/GBUxtBDHiMMIo24Y.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ZjPOAgbWweKIbYNm.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_12017">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locate the notch under the cover at the top of the keyboard Using the spudger as a lever, lift the plastic covering Carefully remove the rest of the covering from right to left</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N775914925ce54819b4efb5118e8e8703">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://cits3005.org/pc-ontology.owl#Tool"/>
+    <swrl:argument1 rdf:resource="urn:swrl#t"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N294761fe54ee4c26aea68015beb13dcd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Na3d02208dd9c49499f6882f95a1316ca"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/niOJPURiQoDNTGgF.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11414">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label>testingtesting</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#p">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/ONsXf56LAijXQyTD.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/WTQYZr6I2AmlrAIW.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8898b98055f7477fb781c1e618514ac3">
+    <rdf:first rdf:nodeID="Neaf552d0a0da402782e8fc4adb7a9a9a"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#hasHazard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cits3005.org/pc-ontology.owl#Step"/>
+    <rdfs:range rdf:resource="http://cits3005.org/pc-ontology.owl#Hazard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/144Sm1RRKfHeAsAv.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/EsL12USdc1aGVj4E.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Text_11608">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Text"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remove the hinge covers by lifting each with the sharp point of the spudger. Notice that the middle cover has a different shape and is more difficult to remove.</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2050c40969bb483996ebdcdc75ced978">
+    <rdf:first rdf:nodeID="Nc6fbffbe7ee74912b387dcde63b89e98"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d30c5ff0f7b4e7babfaefee321f5a77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Na9a0ada3973249eca9cff112bbde9bb5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/DKWsAypFJDKJDEZl.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/TZlrVJvYQsPZCZKO.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/fqf2lFGvUtZDHBWY.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N00b77628c579438084a3ee7afb089f99">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N5ed117ca8ba24941b305eb742da87556"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#tb">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lY4GvfHSv5IhiJGx.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/QmWABaEnqqelMBNm.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/BHtuUrtrDVtjV5sY.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N143eba8c32db4648ab96a04970f42cd0">
+    <rdf:first rdf:nodeID="Ndce86561cc8347a5835c03156b3a1fd4"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb2c8db7f191246759fdca0a397b83365">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N261f1fd9d9b848149001785f0766826d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd87189b9e63947f9bad48b35884afe4c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nf10e134ebfd04c669d494cc988f8ab05"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/bDghaIwVmHtPtMZQ.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/lv4W2iJlSs4JiNdy.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Acer_Aspire_One_D150_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="Nbe501e99a12a45fa924238a07618b07e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/Yew3BSYZGCoJZKVF.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/UZQA11VcIHy6oJnn.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/1D1yWj3RVXoANgbf.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na8cafa0aa56e484b94348e53d065cb71">
+    <rdf:first rdf:nodeID="Nc04013aae0204d8a8eefc89d995fabd1"/>
+    <rdf:rest rdf:nodeID="N8d2566cc8ac5448c8d53108da2a3e2c4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_VGN_S260">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Sony_Vaio_PCG_981L_repair_procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <owl:equivalentClass rdf:nodeID="N294761fe54ee4c26aea68015beb13dcd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/URHmM5Dsj46YtySt.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne5b38789370b4535be6159e80882bbd3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Ndb3a3178d9f646cbb2e138a2ccdb6c00"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd700dc0a64f94abba400158845cea91d">
+    <rdf:first rdf:nodeID="Nc24740bbcc8145a1a61171c89e14cffe"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc18a251874994e48b2761c2c3ce37673">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N009ffe078a3943089193313cd622b023"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/E2D1cvCFnTvg3aJg.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/MQfYUiwQseSHKesi.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/FKJDVd4e2RkvSPOn.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#Step">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7a4076d1b2c9493f90159fa7fe756c3e">
+    <rdf:first rdf:resource="http://cits3005.org/pc-ontology.owl#Procedure"/>
+    <rdf:rest rdf:nodeID="N172ef16b326b403192b74cce2b3bea4f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/dl5V2jQnZkf2cgwL.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N52b4bc9fbd5444008c8b11b9886c7678">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N3c6c494c4a284ed4be5002e315700b78"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/RPuWHKHlVU1g4XKn.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/HXtFZcyo2YHjrPX3.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cits3005.org/pc-ontology.owl#https%3A//d3nevzfk7ii3be.cloudfront.net/igi/SIOmX15FSGhdHVFR.standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://cits3005.org/pc-ontology.owl#Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8909c11e7f6443b1a78ed2a2ead2dcbe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N39aab95c86344790996eace53e176534"/>
+  </rdf:Description>
+</rdf:RDF>

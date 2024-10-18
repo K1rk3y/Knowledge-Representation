@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Node</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .edit-section {
+            margin-top: 20px;
+            background: #eaf2f8;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        let edits = [];
+
+        // Function to track node name changes
+        function editNodeName(oldName, newName) {
+            edits.push({ node: oldName, property: 'name', new_value: newName });
+        }
+
+        // Function to track rdfs:label changes for text nodes
+        function editDataProperty(node, property, newValue) {
+            edits.push({ node: node, property: property, new_value: newValue });
+        }
+
+        // Function to submit edits
+        function confirmChanges() {
+            const payload = {
+                edits: edits
+            };
+
+            fetch('/confirm_edits', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).then(response => {
+                if (response.ok) {
+                    alert('Changes applied successfully!');
+                    window.location.reload();
+                } else {
+                    alert('Error applying changes.');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Node</h1>
+
+        <!-- Search form -->
+        <form method="POST" action="/edit_data">
+            <label for="title">Enter the Current Title of the Node</label>
+            <input type="text" id="title" name="title" placeholder="Node Title" required>
+            <input type="submit" class="btn" value="Search Node">
+        </form>
+
+        {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+
+        {% if title %}
+        <!-- Edit node name -->
+        <div class="edit-section">
+            <h2>Edit Node Name</h2>
+            <label for="new_title">New Node Title</label>
+            <input type="text" id="new_title" name="new_title" value="{{ title }}" oninput="editNodeName('{{ title }}', this.value)">
+        </div>
+
+        <!-- Display and edit data properties, specifically rdfs:label for text nodes -->
+        <div class="edit-section">
+            <h2>Edit Text Properties</h2>
+            <ul>
+                {% for prop in data_properties %}
+                <li>
+                    {{ prop.property }}: 
+                    <input type="text" value="{{ prop.value }}" oninput="editDataProperty('{{ title }}', '{{ prop.property }}', this.value)">
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Submit changes -->
+        <div>
+            <button class="btn" onclick="confirmChanges()">Save Changes</button>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

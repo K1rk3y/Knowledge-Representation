@@ -384,6 +384,100 @@ def delete_data():
 
     return render_template('delete_data.html')
 
+@main.route('/edit_data', methods=['GET', 'POST'])
+def edit_data():
+    if request.method == 'POST':
+        # Retrieve the form data (node to search)
+        title = request.form.get('title', '').strip()
+
+        if not title:
+            return render_template('edit_data.html', error_message="Please enter a valid node title.")
+
+        # Load the RDF graph
+        g = Graph()
+        g.parse("app/data/ifix-it-kg.owl", format="xml")
+        onto = Namespace("http://cits3005.org/pc-ontology.owl#")
+
+        # Create the URI for the node based on the title
+        node_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#{title.replace(' ', '_')}")
+
+        # Query outgoing relationships
+        outgoing_query = f"""
+        SELECT ?predicate ?object WHERE {{
+            <{node_uri}> ?predicate ?object .
+            FILTER (!isLiteral(?object))  # Filters out data properties
+        }}
+        """
+        outgoing_data = g.query(outgoing_query)
+
+        # Query data properties (e.g., rdfs:label for text)
+        data_properties_query = f"""
+        SELECT ?property ?value WHERE {{
+            <{node_uri}> ?property ?value .
+            FILTER (isLiteral(?value))  # Ensures only literal data properties are returned
+        }}
+        """
+        data_properties = g.query(data_properties_query)
+
+        outgoing_relationships = []
+        data_properties_list = []
+
+        # Collect outgoing relationships and data properties
+        for row in outgoing_data:
+            outgoing_relationships.append({
+                "predicate": str(row["predicate"]),
+                "object": str(row["object"])
+            })
+
+        for row in data_properties:
+            if str(row["property"]).endswith("label"):
+                data_properties_list.append({
+                    "property": str(row["property"]),
+                    "value": str(row["value"])
+                })
+
+        if outgoing_relationships or data_properties_list:
+            return render_template('edit_data.html',
+                                   title=title,
+                                   outgoing_relationships=outgoing_relationships,
+                                   data_properties=data_properties_list)
+        else:
+            error_message = f"No data found for the node '{title}'."
+            return render_template('edit_data.html', error_message=error_message)
+
+    return render_template('edit_data.html')
+
+
+@main.route('/confirm_edits', methods=['POST'])
+def confirm_edits():
+    # Retrieve edits from the form
+    data = request.json
+    edits = data.get('edits', [])
+
+    # Load the RDF graph
+    g = Graph()
+    g.parse("app/data/ifix-it-kg.owl", format="xml")
+    onto = Namespace("http://cits3005.org/pc-ontology.owl#")
+
+    for edit in edits:
+        node_name = edit['node']
+        property_name = edit['property']
+        new_value = Literal(edit['new_value'])
+
+        # Create the URI for the node and property
+        node_uri = URIRef(f"http://cits3005.org/pc-ontology.owl#{node_name.replace(' ', '_')}")
+        property_uri = URIRef(property_name)
+
+        # Remove the old value and add the new one
+        g.remove((node_uri, property_uri, None))  # Remove old property value
+        g.add((node_uri, property_uri, new_value))  # Add the updated property value
+
+    # Save the updated graph
+    g.serialize("app/data/ifix-it-kg.owl", format="xml")
+
+    return {"status": "success"}, 200
+
+
 
 
 
