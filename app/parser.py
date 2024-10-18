@@ -228,7 +228,7 @@ def correct_subProcedure_violations(onto, violation_node):
                 vol_node.is_a.remove(onto.Sub_Procedure)
 
 
-def parser_api(onto_path, data_path, save_path, n):
+def parser_api(onto_path, data_path, save_path, n, verbose=False):
     # Load ontology & reasoner
     java_bin_path = r"D:\ComputerCore\Java\bin"
     os.environ["JAVA_HOME"] = java_bin_path
@@ -312,9 +312,10 @@ def parser_api(onto_path, data_path, save_path, n):
     gen_report = run_shacl_validation(onto, shacl_file3)
 
     # Run the reasoner
+    incon_class = []
     with onto:
         sync_reasoner(infer_property_values=True)
-        print(list(default_world.inconsistent_classes()))
+        incon_class = list(default_world.inconsistent_classes())
 
     tool_report_f = run_shacl_validation(onto, shacl_file1)
     sp_report_f = run_shacl_validation(onto, shacl_file2)
@@ -323,7 +324,10 @@ def parser_api(onto_path, data_path, save_path, n):
     # Save the ontology
     onto.save(file=save_path, format="rdfxml")
 
-    return tool_report, sp_report, gen_report, tool_report_f, sp_report_f, gen_report_f
+    if verbose:
+        return tool_report, sp_report, gen_report, tool_report_f, sp_report_f, gen_report_f, incon_class
+
+    return tool_report_f, sp_report_f, gen_report_f, incon_class
 
 
 
@@ -531,4 +535,14 @@ ex:TransitivePropertyShape
 '''
 
 
-print(parser_api("app\data\ifix-it-ontology.owl", "app\data\TEST.json", "app\data\ifix-it-kg.owl", 5))
+
+# Input the path to the ontology file, the path to the raw data, the path you want to save the KG, the number of JSON objects you want to include, verbose
+tool_report, sp_report, gen_report, tool_report_f, sp_report_f, gen_report_f, incon_class = parser_api("app\data\ifix-it-ontology.owl", "app\data\PC.json", "app\data\ifix-it-kg.owl", 100, True)
+
+print("Tool Consistency Report Before Reasoning: ", tool_report)
+print("Sub Procedure Consistency Report Before Reasoning: ", sp_report)
+print("General Consistency Report Before Reasoning: ", gen_report)
+print("Tool Consistency Report After Reasoning: ", tool_report_f)
+print("Sub Procedure Consistency After Before Reasoning: ", sp_report_f)
+print("General Consistency Report After Reasoning: ", gen_report_f)
+print("Inconsistent Classes Report After Reasoning: ", incon_class)
